@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            /*background: #eee;*/
+            /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+            font-size: 14px;
+            /*color:#000;*/
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            /*text-align: center;*/
+            /*font-size: 18px;*/
+            /*background: #fff;*/
+
+            /* Center slide text vertically */
+            /*display: -webkit-box;*/
+            /*display: -ms-flexbox;*/
+            /*display: -webkit-flex;*/
+            /*display: flex;*/
+            /*-webkit-box-pack: center;*/
+            /*-ms-flex-pack: center;*/
+            /*-webkit-justify-content: center;*/
+            /*justify-content: center;*/
+            /*-webkit-box-align: center;*/
+            /*-ms-flex-align: center;*/
+            /*-webkit-align-items: center;*/
+            /*align-items: center;*/
+        }
+
+        .slide-page__content__header--main {
+          white-space: normal;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="sidemenu" style="-webkit-overflow-scrolling: touch;">
+  <div class="sidemenu-switcher" sm-state="1">
+    <div class="con">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+  </div>
+  <div class="sidemenu__header"></div>
+
+  <div class="sidemenu__vertical-logo"></div>
+
+  <ul class="sidemenu__content">
+    <li class="sidemenu__content__item sidemenu__content__item--fst" id="mn"><a id="goto-main" href="index.html#main" data-localize="sidemenu.links.about">О НАС</a></li>
+    <li class="sidemenu__content__item sidemenu__content__item--sec"><a href="portfolio.html" data-localize="sidemenu.links.portfolio">ПОРТФОЛИО</a></li>
+    <li class="sidemenu__content__item sidemenu__content__item--thr" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-localize="sidemenu.links.contacts">КОНТАКТЫ</a></li>
+  </ul>
+
+  <div class="sidemenu__footer">
+    <div class="lng-switch">
+      <div switchLang="ru" class="lng-switch__item">ru</div>
+      <div switchLang="en" class="lng-switch__item">en</div>
+      <div class="lng-switch__bound"></div>
+    </div>
+
+    <div class="sidemenu__footer__contacts">
+      <div><a href="tel:+79172829081">+7 917 282-90-81</a></div>
+      <div><a href="mailto:hello@tasma.com">HELLO@TASMA.COM</a></div>
+    </div>
+
+    <div class="sidemenu__footer__copyrights">
+      <div data-localize="sidemenu.copyrights.tasma">&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;</div>
+      <div data-localize="sidemenu.copyrights.fsep">Дизайн и разработка в <a target="_blank" href="http://1-sep.com">FIRST SEP</a></div>
+    </div>
+  </div>
+  <div class="lng-switch lng-switch--sticked">
+    <div switchLang="ru" class="lng-switch__item">ru</div>
+    <div switchLang="en" class="lng-switch__item">en</div>
+    <div class="lng-switch__bound"></div>
+  </div>
+</div>
+
+
+
+<div class="content">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-page" id="mainpage" data-hash="main">
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content slide-page__content--main">
+            <div class="slide-page__content__header slide-page__content__header--main" data-i18n="slides.mainpage.header">
+              Придумываем
+              и воплощаем идеи
+              в видео
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="engineering">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Engineering.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.engineering.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.engineering.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="0">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="thrones">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Thrones.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.thrones.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.thrones.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="1">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="sarmanovo">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Sarmanovo.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.sarmanovo.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.sarmanovo.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="2">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="vyatka">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Nominees.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.vyatka.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.vyatka.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="3">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide slide-page" data-hash="tatenergosbit">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Tatenergosbyt.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.tatenergosbit.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.tatenergosbit.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="4">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="polis24">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Polis24.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.polis24.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.polis24.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="5">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="fashioncollection">
+          <div class="slide-page__bg" style="background-image: url('../assets/images/portfolio/Collection.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.fashioncollection.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.fashioncollection.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="6">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- fff -->
+        <div class="swiper-slide slide-page" data-hash="velly">
+          <div class="slide-page__bg"  style="background-image: url('../assets/images/portfolio/Velly.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-i18n="[html]slides.velly.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-i18n="slides.velly.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-i18n="play-video" video-id="7">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page slide-page--contacts" data-hash="contacts">
+          <div class="contacts">
+            <div class="contacts__header">
+              <h1 data-i18n="slides.contacts.contact-us">Свяжитесь с нами</h1>
+            </div>
+
+            <div class="contacts__mail">
+              <span data-i18n="slides.contacts.mail">Почта:</span>
+              <a href="mailto:hello@tasma.pro">hello@tasma.pro</a>
+            </div>
+
+            <div class="contacts__phone">
+              <span data-i18n="slides.contacts.phone">Телефон:</span>
+              <a href="tel:+79172829081">+7 917 282-90-81</a>
+            </div>
+
+            <div class="social">
+              <div class="social__item social__item--ig"><a href="https://www.instagram.com/tasmapro/" target="_blank" title="instagram"></a></div>
+              <div class="social__item social__item--vk"><a href="#" target="_blank"></a></div>
+              <div class="social__item social__item--vm"><a href="https://vimeo.com/tasmapro" target="_blank" title="vimeo"></a></div>
+              <div class="social__item social__item--fb"><a href="#" target="_blank"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <!--<div class="swiper-pagination"></div>-->
+      <!-- Add Arrows -->
+      <!--<div class="swiper-button-next swiper-button-white"></div>-->
+      <!--<div class="swiper-button-prev swiper-button-white"></div>-->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="footer">
+      <span></span>
+      <div class="footer__phone"><a href="tel:+79172829081">+ 7 917 282-90-81</a></div>
+    </div>
+  </div>
+
+<div class="preloader">
+  <div class="loader">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="../assets/js/swiper.min.js"></script>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.vide.js"></script>
+<script src="../assets/js/jquery.cookie.js"></script>
+<script src="../assets/js/jquery.localize.min.js"></script>
+<script src="../assets/js/i18next.js"></script>
+<script src="../assets/js/datastorage.js"></script>
+<!--<script src="../assets/js/bootstrap_.js"></script>-->
+
+<!-- Initialize Swiper -->
+<script>
+  $(function () {
+    $('.preloader').remove();
+
+    $('#mainpage').vide('../assets/video/tasma',{
+      posterType: 'jpg',
+      autoplay: true
+    });
+
+    window.footerView = function(){
+      var text = '<a href="portfolio.html">ПОРТФОЛИО</a>';
+      if(window.location.hash == '#main' ||  window.location.hash == '' || window.location.hash == '#contacts'){
+        text = '';
+        $('.footer').removeClass('footer--showed');
+      }else{
+        $('.footer').addClass('footer--showed');
+      }
+
+      $('.footer span').html(text);
+    }
+
+    var swiper = new Swiper('.swiper-container', {
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      spaceBetween: 30,
+      hashnav: true,
+      keyboardControl: true,
+      onSlideChangeEnd: function (swiperObj) {
+        footerView();
+      }
+    });
+
+    footerView();
+
+    $(window).on('hashchange', function(e){
+      footerView();
+    });
+
+    /* find not working code..... */
+
+    // resize footer - work
+    window.resize_footer = function(){
+      var content_width = $('.content').outerWidth();
+      $('.footer').css('width', content_width + 'px');
+    }
+
+    resize_footer();
+
+
+    $(window).resize(function(){
+      resize_footer();
+    });
+
+    // switch lang  -
+    var i18nOptions = {
+      fallbackLng: false,
+      useCookie: true,
+      lng: 'en',
+      preload: ['ru', 'en']
+    };
+
+    $.i18n.init(i18nOptions, function() {
+      $('body').i18n();
+      $('.lng-switch__current').addClass('lng-switch__current--' + $.i18n.lng());
+    });
+
+    var switchLang = function (lang) {
+      $.i18n.setLng(lang);
+      $('body').i18n();
+    }
+
+    var switchLangAnimation = function (lang) {
+      var lastLang = (lang == 'ru' ? 'en' : 'ru');
+
+      if(lang == 'en') {
+        $('.lng-switch__bound').addClass('lng-switch__bound--2state');
+      }else{
+        $('.lng-switch__bound').removeClass('lng-switch__bound--2state');
+      }
+
+      $('.lng-switch__item').each(function () {
+        if($(this).text() == lastLang){
+          $(this).removeClass('lng-switch__item--active');
+        }else{
+          $(this).addClass('lng-switch__item--active');
+        }
+      });
+    };
+
+    $('.lng-switch__item').on('click touchstart', function () {
+      var loadLang = $(this).text();
+      switchLang(loadLang);
+      switchLangAnimation(loadLang);
+    });
+
+    switchLangAnimation('en');
+    switchLang('en');
+
+
+    $('.lng-switch__item').each(function () {
+      this.onclick = function () {
+        var loadLang = $(this).attr('switchLang');
+        switchLang(loadLang);
+        switchLangAnimation(loadLang);
+      };
+    });
+
+    $('.sidemenu-switcher').each(function () {
+      this.onclick = function () {
+        $('.con').toggleClass('active');
+
+        var menu_speed;
+        $(this).toggleClass('sidemenu-switcher--opened');
+        if ($(this).attr('sm-state') == '1') {
+          $(this).attr('sm-state', '2');
+          menu_speed = 1000;
+        } else {
+          $(this).attr('sm-state', '1');
+          menu_speed = 0;
+        }
+
+        $('.sidemenu').toggleClass('sidemenu--opened');
+        $('.swiper-button-next').toggleClass('swiper-button-next--mobile');
+
+        $('.sidemenu__header').fadeToggle(menu_speed);
+        $('.sidemenu__footer').fadeToggle(menu_speed);
+      }
+    });
+
+    $('#goto-contacts').on('click touchstart', function () {
+      swiper.slideTo(13, 100);
+      $('.sidemenu-switcher').trigger('click');
+    });
+
+    $('#goto-main').on('click touchstart', function () {
+      swiper.slideTo(0, 100);
+      $('.sidemenu-switcher').trigger('click');
+    });
+
+    function makeModal(res) {
+      var url = '';
+      if(res.type == 'youtube') {
+        url = 'https://www.youtube.com/embed/' + res.url;
+      }else if(res.type == 'vimeo') {
+        url = 'https://player.vimeo.com/video/' + res.url;
+      }
+
+      $('<div/>').addClass('overlay')
+              .appendTo('body');
+      $('<div/>').addClass('video-container')
+              .appendTo('.overlay');
+      $('<div/>').addClass('overlay__close')
+              .click(function () {
+                $('.overlay').remove();
+              })
+              .appendTo('.overlay');
+
+      $('<iframe/>').attr({
+        src: url,
+        width: '100%',
+        height: '100%',
+        frameborder: '0',
+        webkitallowfullscreen: '',
+        mozallowfullscreen: '',
+        allowfullscreen: ''
+      }).appendTo('.video-container');
+    }
+
+    $('.button-show-video').each(function () {
+      var video_id = $(this).attr('video-id'),
+          resource = videos[video_id];
+      this.onclick = function () {
+        makeModal(resource);
+      };
+    });
+
+  });
+
+</script>
+</body>
+</html>

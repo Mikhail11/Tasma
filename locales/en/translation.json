@@ -1,0 +1,101 @@
+{
+  "head": {
+    "title": "Media studio &quot;Tasma&quot;"
+  },
+  "sidemenu": {
+    "links": {
+      "about": "About us",
+      "portfolio": "Portfolio",
+      "contacts": "Contacts"
+    },
+    "copyrights": {
+      "tasma": "&copy; 2016, TASMA DIGITAL",
+      "fsep": "Powered and design <a target='_blank' href='http://1-sep.com'>FIRST SEP</a>"
+    }
+  },
+  "slides": {
+    "mainpage": {
+      "header": "We invent and \nimplement ideas \nin video"
+    },
+    "engineering": {
+      "header": "Engineering 2015",
+      "type": "Presentation movie"
+    },
+    "thrones": {
+      "header": "Kazan in the style of &quot;Games of thrones&quot;",
+      "type": "3D animation"
+    },
+    "sarmanovo": {
+      "header": "Sarmanovskiy district",
+      "type": "Promotion video"
+    },
+    "vyatka": {
+      "header": "Industrial park &quot;Vyatka&quot;",
+      "type": "Presentation movie"
+    },
+    "south": {
+      "header": "Residential complex &quot;South Park&quot;",
+      "type": "Advertisement"
+    },
+    "backstage": {
+      "header": "Backstage filming for the interactive museum of AIR RT",
+      "type": "Video installation"
+    },
+    "oicyouthforum": {
+      "header": "Video invitation to the OIC forum",
+      "type": "Presentation movie"
+    },
+    "rules": {
+      "header": "9 rules of comfortable living",
+      "type": "2D animation"
+    },
+    "contacts": {
+      "contact-us": "Contact us",
+      "mail": "Email: ", 
+      "phone": "Phone: ",
+      "download_presentation": "Download presentation",
+      "presentation_file": "presentation_eng.pdf"
+    }
+  },
+  "portfolio": {
+    "engineering": {
+      "header": "Engineering 2015",
+      "type": "presentation movie"
+    },
+    "thrones": {
+      "header": "Kazan in the style of &quot;Games of thrones&quot;",
+      "type": "3D animation"
+    },
+    "sarmanovo": {
+      "header": "Sarmanovskiy district",
+      "type": "Promotion video"
+    },
+    "vyatka": {
+      "header": "Industrial park &quot;Vyatka&quot;",
+      "type": "Presentation movie"
+    },
+    "south": {
+      "header": "Residential complex &quot;South Park&quot;",
+      "type": "Advertisement"
+    },
+    "backstage": {
+      "header": "Backstage filming for the interactive museum of AIR RT",
+      "type": "Video installation"
+    },
+    "oicyouthforum": {
+      "header": "Video invitation to the OIC forum",
+      "type": "Presentation movie"
+    },
+    "rules": {
+      "header": "9 rules of comfortable living",
+      "type": "2D animation"
+    },
+    "empty": "This place for your movie"
+ },
+  "play-video": "Watch video",
+  "footer": {
+    "portfolio": "PORTFOLIO",
+    "vimeo": "More on Vimeo",
+    "works": "OUR WORKS"
+  }
+}

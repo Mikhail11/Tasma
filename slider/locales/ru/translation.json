@@ -1,0 +1,90 @@
+{
+  "sidemenu": {
+    "links": {
+      "about": "О нас",
+      "portfolio": "Портфолио",
+      "contacts": "Контакты"
+    },
+    "copyrights": {
+      "tasma": "&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;",
+      "fsep": "Дизайн и разработка в <a target='_blank' href='http://1-sep.com'>FIRST SEP</a>"
+    }
+  },
+  "slides": {
+    "mainpage": {
+        "header": "Придумываем \nи воплощаем идеи \nв видео"
+    },
+    "engineering": {
+      "header": "Машиностроение",
+      "type": "Презентационный"
+    },
+    "thrones": {
+      "header": "Игра престолов",
+      "type": "Частный/игровой"
+    },
+    "sarmanovo": {
+      "header": "Сарманово",
+      "type": "Имиджевый"
+    },
+    "vyatka": {
+      "header": "Промышленный парк &laquo;Вятка&raquo;",
+      "type": "Презентационный/графический"
+    },
+    "tatenergosbit": {
+      "header": "Советы по энергосбережению",
+      "type": "Графический"
+    },
+    "polis24": {
+      "header": "Реклама сервиса &laquo;Полис 24&raquo;",
+      "type": "Реклама"
+    },
+    "fashioncollection": {
+      "header": "Модная коллекция <br>Алины Галиевой",
+      "type": "Реклама"
+    },
+    "velly": {
+      "header": "Вэлли",
+      "type": "Ролик"
+    },
+    "contacts": {
+      "contact-us": "Свяжитесь с нами",
+      "mail": "Почта: ",
+      "phone": "Телефон: "
+    }
+  },
+  "portfolio": {
+    "engineering": {
+      "header": "Машиностроение",
+      "type": "Презентационный"
+    },
+    "thrones": {
+      "header": "Игра престолов",
+      "type": "Частный/игровой"
+    },
+    "sarmanovo": {
+      "header": "Сарманово",
+      "type": "Имиджевый"
+    },
+    "vyatka": {
+      "header": "Промышленный парк &laquo;Вятка&raquo;",
+      "type": "Презентационный/графический"
+    },
+    "tatenergosbit": {
+      "header": "Советы по энергосбережению",
+      "type": "Графический"
+    },
+    "polis24": {
+      "header": "Реклама сервиса &laquo;Полис 24&raquo;",
+      "type": "Реклама"
+    },
+    "fashioncollection": {
+      "header": "Модная коллекция Алины Галиевой",
+      "type": "Реклама"
+    },
+    "velly": {
+      "header": "Ролик &laquo;Вэлли&raquo;",
+      "type": "Ролик"
+    }
+  },
+  "play-video": "Посмотреть"
+}

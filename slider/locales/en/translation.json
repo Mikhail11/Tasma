@@ -1,0 +1,90 @@
+{
+  "sidemenu": {
+    "links": {
+      "about": "About us",
+      "portfolio": "Portfolio",
+      "contacts": "Contacts"
+    },
+    "copyrights": {
+      "tasma": "&copy; 2016, TASMA DIGITAL",
+      "fsep": "Powered and design <a target='_blank' href='http://1-sep.com'>FIRST SEP</a>"
+    }
+  },
+  "slides": {
+    "mainpage": {
+      "header": "We invent and \nimplement ideas \nin video"
+    },
+    "engineering": {
+      "header": "Engineering",
+      "type": "Presentation"
+    },
+    "thrones": {
+      "header": "Game of Thrones",
+      "type": "Personal/Gaming"
+    },
+    "sarmanovo": {
+      "header": "Sarmanovo",
+      "type": "Image"
+    },
+    "vyatka": {
+      "header": "Industrial park &laquo;Vyatka&raquo;",
+      "type": "Presentation/graphical"
+    },
+    "tatenergosbit": {
+      "header": "Energy saving tips",
+      "type": "Graphical"
+    },
+    "polis24": {
+      "header": "Advertising service &laquo;Polis 24&raquo;",
+      "type": "Advertisement"
+    },
+    "fashioncollection": {
+      "header": "Alina Galieva's fashion collection",
+      "type": "Advertisement"
+    },
+    "velly": {
+      "header": "Velly",
+      "type": "Cartoon"
+    },
+    "contacts": {
+      "contact-us": "Contact us",
+      "mail": "Email: ",
+      "phone": "Phone: "
+    }
+  },
+  "portfolio": {
+    "engineering": {
+      "header": "Engineering",
+      "type": "Presentation"
+    },
+    "thrones": {
+      "header": "Game of Thrones",
+      "type": "Personal/Gaming"
+    },
+    "sarmanovo": {
+      "header": "Sarmanovo",
+      "type": "Image"
+    },
+    "vyatka": {
+      "header": "Industrial park &laquo;Vyatka&raquo;",
+      "type": "Presentation/graphical"
+    },
+    "tatenergosbit": {
+      "header": "Energy saving tips",
+      "type": "Graphical"
+    },
+    "polis24": {
+      "header": "Advertising service &laquo;Polis 24&raquo;",
+      "type": "Advertisement"
+    },
+    "fashioncollection": {
+      "header": "Alina Galieva's fashion collection",
+      "type": "Advertisement"
+    },
+    "velly": {
+      "header": "Velly",
+      "type": "Cartoon"
+    }
+ },
+  "play-video": "Watch video"
+}

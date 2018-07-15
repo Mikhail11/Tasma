@@ -1,0 +1,101 @@
+{
+  "head": {
+    "title": "Медиа студия &quot;Тасма&quot;"
+  },
+  "sidemenu": {
+    "links": {
+      "about": "О нас",
+      "portfolio": "Портфолио",
+      "contacts": "Контакты"
+    },
+    "copyrights": {
+      "tasma": "&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;",
+      "fsep": "Дизайн и разработка в <a target='_blank' href='http://1-sep.com'>FIRST SEP</a>"
+    }
+  },
+  "slides": {
+    "mainpage": {
+      "header": "Придумываем \nи воплощаем идеи \nв видео"
+    },
+    "engineering": {
+      "header": "Машиностроение 2015",
+      "type": "Презентационный"
+    },
+    "thrones": {
+      "header": "Казань в стиле &laquo;Игры престолов&raquo;",
+      "type": "3D анимация"
+    },
+    "sarmanovo": {
+      "header": "Сармановский район",
+      "type": "Имиджевый"
+    },
+    "vyatka": {
+      "header": "Промышленный парк &laquo;Вятка&raquo;",
+      "type": "Презентационный/графический"
+    },
+    "south": {
+      "header": "Жилой комплекс &laquo;Южный бульвар&raquo;",
+      "type": "Имиджевый/рекламный"
+    },
+    "backstage": {
+      "header": "Бекстейдж съемок для интерактивного музея АИР РТ",
+      "type": "Видеоинсталляция"
+    },
+    "oicyouthforum": {
+      "header": "Видеоприглашение на форум ОИС",
+      "type": "Презентационный"
+    },
+    "rules": {
+      "header": "9 правил комфортного проживания",
+      "type": "2D анимация"
+    },
+    "contacts": {
+      "contact-us": "Свяжитесь с нами",
+      "mail": "Почта: ",
+      "phone": "Телефон: ",
+      "download_presentation": "Скачать презентацию",
+      "presentation_file": "presentation.pdf"
+    }
+  },
+  "portfolio": {
+    "engineering": {
+      "header": "Машиностроение 2015",
+      "type": "Презентационный"
+    },
+    "thrones": {
+      "header": "Казань в стиле &laquo;Игры престолов&raquo;",
+      "type": "3D анимация"
+    },
+    "sarmanovo": {
+      "header": "Сармановский район",
+      "type": "Имиджевый"
+    },
+    "vyatka": {
+      "header": "Промышленный парк &laquo;Вятка&raquo;",
+      "type": "Презентационный/графический"
+    },
+    "south": {
+      "header": "Жилой комплекс &laquo;Южный бульвар&raquo;",
+      "type": "Имиджевый/рекламный"
+    },
+    "backstage": {
+      "header": "Бекстейдж съемок для интерактивного музея АИР РТ",
+      "type": "Видеоинсталляция"
+    },
+    "oicyouthforum": {
+      "header": "Видеоприглашение на форум ОИС",
+      "type": "Презентационный"
+    },
+    "rules": {
+      "header": "9 правил комфортного проживания",
+      "type": "2D анимация"
+    },
+    "empty": "Место для вашего ролика"
+  },
+  "play-video": "Посмотреть",
+  "footer": {
+    "portfolio": "Портфолио",
+    "vimeo": "Больше работ на Vimeo",
+    "works": "НАШИ РАБОТЫ"
+  }
+}

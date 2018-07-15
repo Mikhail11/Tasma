@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!--<link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css">-->
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="shortcut icon" href="/assets/images/favicon-32.png" type="image/png">
+  <title>Tasma</title>
+</head>
+<body>
+  <div class="sidemenu" style="-webkit-overflow-scrolling: touch;">
+    <div class="sidemenu-switcher" sm-state="1">
+        <div class="con">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+    </div>
+    <div class="sidemenu__header"></div>
+
+    <div class="sidemenu__vertical-logo"></div>
+
+    <ul class="sidemenu__content">
+      <li class="sidemenu__content__item sidemenu__content__item--fst"><a id="goto-main" href="index.html#main" data-localize="sidemenu.links.about">О НАС</a></li>
+      <li class="sidemenu__content__item sidemenu__content__item--sec"><a href="portfolio.html" data-localize="sidemenu.links.portfolio">ПОРТФОЛИО</a></li>
+      <li class="sidemenu__content__item sidemenu__content__item--thr"><a id="goto-contacts" href="index.html#contacts"  data-localize="sidemenu.links.contacts">КОНТАКТЫ</a></li>
+    </ul>
+
+    <div class="sidemenu__footer">
+      <div class="lng-switch">
+        <div switchLang="ru" class="lng-switch__item">RU</div>
+        <div switchLang="en" class="lng-switch__item">ENG</div>
+        <div class="lng-switch__bound"></div>
+      </div>
+
+      <div class="sidemenu__footer__contacts">
+        <div><a href="tel:+79172829081">+7 917 282-90-81</a></div>
+        <div><a href="mailto:hello@tasma.com">HELLO@TASMA.COM</a></div>
+      </div>
+
+      <div class="sidemenu__footer__copyrights">
+        <div data-localize="sidemenu.copyrights.tasma">&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;</div>
+        <div data-localize="sidemenu.copyrights.fsep">Дизайн и разработка в <a target="_blank" href="http://1-sep.com">FIRST SEP</a></div>
+      </div>
+    </div>
+    <div class="lng-switch lng-switch--sticked">
+      <div switchLang="ru" class="lng-switch__item">RU</div>
+      <div switchLang="en" class="lng-switch__item">ENG</div>
+      <div class="lng-switch__bound"></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-page" id="mainpage" data-hash="main">
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content slide-page__content--main">
+            <div class="slide-page__content__header slide-page__content__header--main" data-localize="slides.mainpage.header">
+              Придумываем
+              и воплощаем идеи
+              в видео
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="engineering">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Engineering.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.engineering.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.engineering.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="0">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="thrones">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Thrones.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.thrones.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.thrones.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="1">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="sarmanovo">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Sarmanovo.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.sarmanovo.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.sarmanovo.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="2">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="vyatka">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Nominees.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.vyatka.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.vyatka.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="3">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide slide-page" data-hash="tatenergosbit">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Tatenergosbyt.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.tatenergosbit.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.tatenergosbit.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="4">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="polis24">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Polis24.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.polis24.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.polis24.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="5">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="fashioncollection">
+          <div class="slide-page__bg" style="background-image: url('assets/images/portfolio/Collection.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.fashioncollection.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.fashioncollection.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="6">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page" data-hash="velly">
+          <div class="slide-page__bg"  style="background-image: url('assets/images/portfolio/Velly.png');"></div>
+          <div class="slide-page__grid-layer"></div>
+          <div class="slide-page__content">
+            <div class="slide-page__content__header" data-localize="slides.velly.header">
+              Здесь какой-то текст, который надо придумать
+            </div>
+            <div class="slide-page__content__type"  data-localize="slides.velly.type">
+              Промо-ролик
+            </div>
+            <div class="slide-page__content__show-video-btn">
+              <div class="button-show-video button-show-video--large" data-localize="play-video" video-id="7">
+                ПОСМОТРЕТЬ
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide-page slide-page--contacts" data-hash="contacts">
+          <div class="contacts">
+            <div class="contacts__header">
+              <h1 data-localize="slides.contacts.contact-us">Свяжитесь с нами</h1>
+            </div>
+
+            <div class="contacts__mail">
+              <span data-localize="slides.contacts.mail">Почта:</span>
+              <a href="mailto:hello@tasma.pro">hello@tasma.pro</a>
+            </div>
+
+            <div class="contacts__phone">
+              <span data-localize="slides.contacts.phone">Телефон:</span>
+              <a href="tel:+79172829081">+7 917 282-90-81</a>
+            </div>
+
+            <div class="social">
+              <div class="social__item social__item--ig"><a href="https://www.instagram.com/tasmapro/" target="_blank" title="instagram"></a></div>
+              <div class="social__item social__item--vk"><a href="#" target="_blank"></a></div>
+              <div class="social__item social__item--vm"><a href="https://vimeo.com/tasmapro" target="_blank" title="vimeo"></a></div>
+              <div class="social__item social__item--fb"><a href="#" target="_blank"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <!--<div class="swiper-pagination"></div>-->
+      <!-- Add Arrows -->
+      <!--<div class="swiper-button-next swiper-button-white"></div>-->
+      <!--<div class="swiper-button-prev swiper-button-white"></div>-->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="footer">
+      <span><a href="portfolio.html">ПОРТФОЛИО</a></span>
+      <div class="footer__phone"><a href="tel:+79172829081">+ 7 917 282-90-81</a></div>
+    </div>
+  </div>
+  <div class="preloader">
+    <div class="loader">
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.cookie.js"></script>
+  <script src="assets/js/jquery.localize.min.js"></script>
+  <script src="assets/js/jquery.vide.js"></script>
+  <!--<script src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>-->
+  <script src="assets/js/swiper.jquery.min.js"></script>
+  <script src="assets/js/datastorage.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+
+  <script>
+    $(function () {
+      var swiper = new Swiper('.swiper-container', {
+//        effect: 'coverflow',
+//        coverflow: {
+//          rotate: 0,
+//          stretch: 10,
+//          depth: 100,
+//          modifier: 1,
+//          slideShadows : false
+//        },
+        speed: 700,
+//        pagination: '.swiper-pagination',
+//        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        hashnav: true,
+        keyboardControl: true,
+        preloadImages: true
+      });
+
+      $('#goto-contacts').on('click touchstart', function () {
+        swiper.slideTo(13, 100);
+      });
+
+      $('#goto-main').on('click touchstart', function () {
+        swiper.slideTo(0, 100);
+      });
+
+      window.footerView = function(){
+        var text = 'ПОРТФОЛИО';
+        if(window.location.hash == '#main' ||  window.location.hash == '' || window.location.hash == '#contacts'){
+          text = '';
+          $('.footer').removeClass('footer--showed');
+        }else{
+          $('.footer').addClass('footer--showed');
+        }
+
+        $('.footer span').text(text);
+      }
+
+      footerView();
+
+      $(window).on('hashchange', function(e){
+        footerView();
+      });
+
+      $('#mainpage').vide('assets/video/tasma',{
+        posterType: 'jpg',
+        autoplay: true
+      });
+    });
+  </script>
+
+
+</body>
+</html>
