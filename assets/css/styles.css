@@ -53,7 +53,7 @@ body {
 }
 
 body {
-    background: #030303;
+    background: #1a1b1f;
     font-family: "BigCity Grotesque Pro Regular";
 }
 
@@ -1616,82 +1616,4 @@ footer {
 
 .menu-overlay--show {
     display: block;
-}
-
-/* buttons*/
-.btn {
-    padding:13px 20px;
-    font-family: 'BigCity Grotesque Pro Regular';
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: normal;
-    text-align: center;
-    border-width:2px;
-    border-style: solid;
-    border-radius: 4px;
-}
-
-.btn_small {
-    padding: 6px 13px;
-}
-
-.btn_default {
-    border-color: #fff;
-    color:#fff;
-
-}
-
-.btn_default:hover,
-.btn_default:active {
-    background-color: #fff;
-    color:#000;
-}
-
-.btn_red {
-    border-color: #f43d48;
-    color:#fff;
-    background-color: #f43d48;
-}
-
-.btn_red:hover,
-.btn_red:active {
-    background-color: #db232e;
-}
-
-.btn_grey {
-    background-color: rgba(255,255,255,.1);
-    border-color: rgba(255,255,255,.1);
-    color:#fff;
-}
-
-.btn_grey:hover,
-.btn_grey:active {
-    background-color: #f43d48;
-    border-color: #f43d48;
-}
-
-/* inputs */
-
-.inpt {
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
-    font-family: 'BigCity Grotesque Pro Regular';
-    font-size: 16px;
-    line-height: 1.5;
-    color:rgba(255, 255, 255, .5);
-    width:100%;
-    background-color: transparent;
-}
-
-.inpt:hover,
-.inpt:active,
-.inpt:focus {
-   border-color:#fff;
-   color:#fff;
-}
-
-.inpt_error {
-    border-color:#f43d48;
 }

@@ -8,54 +8,108 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/controls.css">
     <link rel="shortcut icon" href="/assets/images/favicon-32.png" type="image/png">
 </head>
 <body>
-<div class="sidemenu" style="-webkit-overflow-scrolling: touch;">
-    <div class="sidemenu-switcher" sm-state="1">
-        <div class="con">
-            <div class="bar top"></div>
-            <div class="bar middle"></div>
-            <div class="bar bottom"></div>
+<!--<div class="sidemenu" style="-webkit-overflow-scrolling: touch;">-->
+    <!--<div class="sidemenu-switcher" sm-state="1">-->
+        <!--<div class="con">-->
+            <!--<div class="bar top"></div>-->
+            <!--<div class="bar middle"></div>-->
+            <!--<div class="bar bottom"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="sidemenu__header"></div>-->
+
+    <!--<div class="sidemenu__vertical-logo"></div>-->
+
+    <!--<ul class="sidemenu__content">-->
+        <!--<li class="sidemenu__content__item sidemenu__content__item&#45;&#45;fst" id="mn"><a id="goto-main" href="index.html#main" data-i18n="sidemenu.links.about">О НАС</a></li>-->
+        <!--<li class="sidemenu__content__item sidemenu__content__item&#45;&#45;sec"><a href="portfolio.html" data-i18n="sidemenu.links.portfolio">ПОРТФОЛИО</a></li>-->
+        <!--<li class="sidemenu__content__item sidemenu__content__item&#45;&#45;thr" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-i18n="sidemenu.links.contacts">КОНТАКТЫ</a></li>-->
+    <!--</ul>-->
+
+    <!--<div class="sidemenu__footer">-->
+        <!--<div class="lng-switch">-->
+            <!--<div switchLang="ru" class="lng-switch__item">ru</div>-->
+            <!--<div switchLang="en" class="lng-switch__item">en</div>-->
+            <!--<div class="lng-switch__bound"></div>-->
+        <!--</div>-->
+
+        <!--<div class="sidemenu__footer__contacts">-->
+            <!--<div><a href="tel:+78432265557">+7(843)226-55-57</a></div>-->
+            <!--<div><a href="mailto:arttasma@gmail.com" class="sidemenu__footer__contacts__email">arttasma@gmail.com</a></div>-->
+        <!--</div>-->
+
+        <!--<div class="sidemenu__footer__copyrights">-->
+            <!--<div data-i18n="[html]sidemenu.copyrights.tasma">&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;</div>-->
+            <!--<div data-i18n="[html]sidemenu.copyrights.fsep">Дизайн и разработка в <a target="_blank" href="http://1-sep.com">FIRST SEP</a></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="lng-switch lng-switch&#45;&#45;sticked">-->
+        <!--<div switchLang="ru" class="lng-switch__item">ru</div>-->
+        <!--<div switchLang="en" class="lng-switch__item">en</div>-->
+        <!--<div class="lng-switch__bound"></div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="menu-overlay"></div>-->
+
+<div class="container">
+    <div class="container__item container__items_downed container">
+        <h3 class="header header_h3 header_white header_bold">Заполните бриф</h3>
+        <div class="container__item-content-half">
+            <p class="header header_p header_white-t">Оставьте заявку и наш менеджер свяжится с вами в ближайшее время
+                или позвоните нам сами:&nbsp<a class="link" href="tel:+7(843)226-55-57">+7(843)226-55-57</a></p>
         </div>
     </div>
-    <div class="sidemenu__header"></div>
-
-    <div class="sidemenu__vertical-logo"></div>
-
-    <ul class="sidemenu__content">
-        <li class="sidemenu__content__item sidemenu__content__item--fst" id="mn"><a id="goto-main" href="index.html#main" data-i18n="sidemenu.links.about">О НАС</a></li>
-        <li class="sidemenu__content__item sidemenu__content__item--sec"><a href="portfolio.html" data-i18n="sidemenu.links.portfolio">ПОРТФОЛИО</a></li>
-        <li class="sidemenu__content__item sidemenu__content__item--thr" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-i18n="sidemenu.links.contacts">КОНТАКТЫ</a></li>
-    </ul>
-
-    <div class="sidemenu__footer">
-        <div class="lng-switch">
-            <div switchLang="ru" class="lng-switch__item">ru</div>
-            <div switchLang="en" class="lng-switch__item">en</div>
-            <div class="lng-switch__bound"></div>
-        </div>
-
-        <div class="sidemenu__footer__contacts">
-            <div><a href="tel:+78432265557">+7(843)226-55-57</a></div>
-            <div><a href="mailto:arttasma@gmail.com" class="sidemenu__footer__contacts__email">arttasma@gmail.com</a></div>
-        </div>
-
-        <div class="sidemenu__footer__copyrights">
-            <div data-i18n="[html]sidemenu.copyrights.tasma">&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;</div>
-            <div data-i18n="[html]sidemenu.copyrights.fsep">Дизайн и разработка в <a target="_blank" href="http://1-sep.com">FIRST SEP</a></div>
+    <div class="container__item container">
+        <h4 class="header header_h4 header_white header_bold">Тип проекта</h4>
+        <div class="container__item-content container container_row">
+            <span class="btn btn_grey btn_active btn_small">Презентационный</span>
+            <span class="btn btn_grey btn_small">Имиджевый</span>
+            <span class="btn btn_grey btn_small">Видеоинсталляция</span>
+            <span class="btn btn_grey btn_small">Анимация</span>
+            <span class="btn btn_grey btn_small btn_last">Рекламный</span>
         </div>
     </div>
-    <div class="lng-switch lng-switch--sticked">
-        <div switchLang="ru" class="lng-switch__item">ru</div>
-        <div switchLang="en" class="lng-switch__item">en</div>
-        <div class="lng-switch__bound"></div>
+    <div class="container__item container">
+        <h4 class="header header_h4 header_white header_bold">Бюджет</h4>
+        <div class="container__item-content container container_row">
+            <span class="btn btn_grey btn_active btn_small">1-5 млн</span>
+            <span class="btn btn_grey btn_small">5-10 млн</span>
+            <span class="btn btn_grey btn_small">10-25 млн</span>
+            <span class="btn btn_grey btn_small">Более 25 млн</span>
+        </div>
     </div>
-</div>
-<div class="menu-overlay"></div>
-
-<div class="content">
-    <input type="text" class="inpt" placeholder="Имя">
+    <div class="container__item container__items_downed container">
+        <h4 class="header header_h4 header_white header_bold">Подробная информация</h4>
+        <div class="container__item-content-half">
+            <input type="text" class="inpt" placeholder="Опишите задачу"/>
+        </div>
+        <div class="container__item container container__elem container_row">
+            <span class="btn btn_default">Прикрепить файл</span>
+        </div>
+    </div>
+    <div class="container__item container__items_downed container">
+        <h4 class="header header_h4 header_white header_bold">Подробная информация</h4>
+        <div class="container__item-content-half container container_row container__items_semi-downed">
+            <input type="text" class="inpt container__elem_50" placeholder="Опишите задачу"/>
+            <input type="text" class="inpt container__elem_50" placeholder="Компания"/>
+        </div>
+        <div class="container__item-content-half container container_row container__items_semi-downed">
+            <input type="text" class="inpt container__elem_50" placeholder="Электронная почта"/>
+            <input type="text" class="inpt container__elem_50" placeholder="Телефон"/>
+        </div>
+    </div>
+    <div class="container__item container container_row">
+        <span class="btn btn_red">Отправить заявку</span>
+        <div class="container__elem_50">
+            <p class="header header_p header_white-t">Эта страница защищена функцией reCAPTCHA и попадает под <a class="link" href="">Политику конфедициальности</a>
+            и <a class="link" href="">Условия использования Google</a>
+            </p>
+        </div>
+    </div>
 </div>
 
 

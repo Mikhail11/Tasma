@@ -1,0 +1,240 @@
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+body { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+body { overflow: -moz-scrollbars-none; }
+
+body {
+    overflow-y: scroll;
+}
+
+/* headers */
+.header {
+    font-family: 'BigCity Grotesque Pro Regular';
+    display: block;
+}
+
+.header_bold {
+    font-weight: bold;
+}
+
+.header_h1 {
+    line-height: 64px;
+    font-size: 56px;
+}
+
+.header_h2 {
+    line-height: 48px;
+    font-size: 40px;
+}
+
+.header_h3 {
+    line-height: 40px;
+    font-size: 32px;
+}
+
+.header_p {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.header_white {
+    color:#fff;
+}
+
+.header_white-t {
+    color:rgba(255, 255, 255, .5);
+}
+
+.header_red-1 {
+    color:#f43d48;
+}
+.header_red-2 {
+   color:#db232e;
+}
+
+.header_black-2 {
+    color: #1a1b1f;
+}
+
+.header_black-1 {
+    color: #010101;
+}
+
+/* links */
+
+.link {
+   font-size: 16px;
+   line-height: 24px;
+   font-family: "BigCity Grotesque Pro Regular";
+   color:#fff;
+   text-decoration: none;
+   outline: none;
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+    color:rgba(255, 255, 255, .5);
+}
+
+
+/* buttons*/
+.btn {
+    padding:13px 20px;
+    font-family: 'BigCity Grotesque Pro Regular';
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    border-width:2px;
+    border-style: solid;
+    border-radius: 4px;
+    margin-right:16px;
+    display:block;
+    cursor: pointer;
+}
+
+
+.btn_last {
+    margin-right:0;
+}
+.btn_small {
+    padding: 6px 13px;
+}
+
+.btn_default {
+    border-color: #fff;
+    color:#fff;
+
+}
+
+.btn_default:hover,
+.btn_default:active,
+.btn_default.btn_active {
+    background-color: #fff;
+    color:#000;
+}
+
+.btn_red {
+    border-color: #f43d48;
+    color:#fff;
+    background-color: #f43d48;
+}
+
+.btn_red:hover,
+.btn_red:active,
+.btn_red.btn_active{
+    background-color: #db232e;
+}
+
+.btn_grey {
+    background-color: rgba(255,255,255,.1);
+    border:none;
+    color:#fff;
+}
+
+.btn_grey:hover,
+.btn_grey:active,
+.btn_grey.btn_active{
+    background-color: #f43d48;
+
+}
+
+/* inputs */
+
+.inpt {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    font-family: 'BigCity Grotesque Pro Regular';
+    font-size: 16px;
+    line-height: 1.5;
+    color:rgba(255, 255, 255, .5);
+    width:100%;
+    background-color: transparent;
+}
+
+.inpt:hover,
+.inpt:active,
+.inpt:focus {
+    border-color:#fff;
+    color:#fff;
+}
+
+.inpt_error {
+    border-color:#f43d48;
+}
+
+/* flex-container */
+
+.container {
+    width:100%;
+    padding:80px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:stretch;
+       -ms-flex-align:stretch;
+          align-items:stretch;
+    -webkit-box-pack:start;
+       -ms-flex-pack:start;
+     justify-content:flex-start;
+       -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+       -ms-flex-direction:column;
+           flex-direction:column;
+
+}
+
+.container_row {
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+}
+
+.container__item {
+    margin-top: 42px;
+    padding:0;
+}
+
+.container__items_downed {
+    margin-top: 62px;
+}
+
+.container__item-content-half {
+    width:50%;
+    margin-top:21px;
+    padding:0;
+}
+
+.container__item-content {
+    margin-top: 21px;
+    padding:0;
+}
+
+.container__elem {
+    margin-top:32px;
+    padding:0;
+}
+
+.container__elem_50 {
+    width:45%;
+    margin-right: 10%;
+}
+
+.container__elem_50:last-child {
+    margin-right: 0;
+}
+
+.container__items_semi-downed {
+    margin-top: 42px;
+}
