@@ -36,9 +36,19 @@ body {
     font-size: 32px;
 }
 
+.header_h4 {
+    line-height: 27px;
+    font-size: 18px;
+}
+
 .header_p {
     line-height: 24px;
     font-size: 16px;
+}
+
+.header_s {
+    line-height: 18px;
+    font-size: 14px;
 }
 
 .header_white {
@@ -54,6 +64,10 @@ body {
 }
 .header_red-2 {
    color:#db232e;
+}
+
+.header_red-3 {
+   color:#e5353e;
 }
 
 .header_black-2 {
@@ -229,6 +243,10 @@ body {
 .container__elem_50 {
     width:45%;
     margin-right: 10%;
+}
+
+.container__elem_25 {
+    width:25%;
 }
 
 .container__elem_50:last-child {

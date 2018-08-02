@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Медиа студия "Тасма"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/controls.css">
+    <link rel="shortcut icon" href="/assets/images/favicon-32.png" type="image/png">
+</head>
+<body>
+<!--<div class="sidemenu" style="-webkit-overflow-scrolling: touch;">-->
+<!--<div class="sidemenu-switcher" sm-state="1">-->
+<!--<div class="con">-->
+<!--<div class="bar top"></div>-->
+<!--<div class="bar middle"></div>-->
+<!--<div class="bar bottom"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="sidemenu__header"></div>-->
+
+<!--<div class="sidemenu__vertical-logo"></div>-->
+
+<!--<ul class="sidemenu__content">-->
+<!--<li class="sidemenu__content__item sidemenu__content__item&#45;&#45;fst" id="mn"><a id="goto-main" href="index.html#main" data-i18n="sidemenu.links.about">О НАС</a></li>-->
+<!--<li class="sidemenu__content__item sidemenu__content__item&#45;&#45;sec"><a href="portfolio.html" data-i18n="sidemenu.links.portfolio">ПОРТФОЛИО</a></li>-->
+<!--<li class="sidemenu__content__item sidemenu__content__item&#45;&#45;thr" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-i18n="sidemenu.links.contacts">КОНТАКТЫ</a></li>-->
+<!--</ul>-->
+
+<!--<div class="sidemenu__footer">-->
+<!--<div class="lng-switch">-->
+<!--<div switchLang="ru" class="lng-switch__item">ru</div>-->
+<!--<div switchLang="en" class="lng-switch__item">en</div>-->
+<!--<div class="lng-switch__bound"></div>-->
+<!--</div>-->
+
+<!--<div class="sidemenu__footer__contacts">-->
+<!--<div><a href="tel:+78432265557">+7(843)226-55-57</a></div>-->
+<!--<div><a href="mailto:arttasma@gmail.com" class="sidemenu__footer__contacts__email">arttasma@gmail.com</a></div>-->
+<!--</div>-->
+
+<!--<div class="sidemenu__footer__copyrights">-->
+<!--<div data-i18n="[html]sidemenu.copyrights.tasma">&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;</div>-->
+<!--<div data-i18n="[html]sidemenu.copyrights.fsep">Дизайн и разработка в <a target="_blank" href="http://1-sep.com">FIRST SEP</a></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="lng-switch lng-switch&#45;&#45;sticked">-->
+<!--<div switchLang="ru" class="lng-switch__item">ru</div>-->
+<!--<div switchLang="en" class="lng-switch__item">en</div>-->
+<!--<div class="lng-switch__bound"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="menu-overlay"></div>-->
+
+<div class="container">
+    <div class="container__item container__items_downed container">
+        <h3 class="header header_h3 header_white header_bold">Свяжитесь с нами</h3>
+    </div>
+    <div class="container__item container container_row">
+        <div class="container container__item-content container__elem_25">
+            <span class="header header_s header_red-3">Телефон</span>
+            <h4 class="header header_h4 header_white header_bold container__item-content">+7(843)226-55-57</h4>
+        </div>
+        <div class="container container__item-content container__elem_25">
+            <span class="header header_s header_red-3">Дополнительно</span>
+            <h4 class="header header_h4 header_white header_bold container__item-content">Скачать презентацию</h4>
+        </div>
+    </div>
+    <div class="container__item container container_row">
+        <div class="container container__item-content container__elem_25">
+            <span class="header header_s header_red-3">Почта</span>
+            <h4 class="header header_h4 header_white header_bold container__item-content">arttasms@gmail.com</h4>
+        </div>
+        <div class="container container__item-content container__elem_25">
+            <span class="header header_s header_red-3">Социальные сети</span>
+            <h4 class="header header_h4 header_white header_bold container__item-content">+7(843)226-55-57</h4>
+        </div>
+    </div>
+    <div class="container__item container container_row">
+        <span class="btn btn_red">Запонить бриф</span>
+    </div>
+</div>
+
+
+<!-- Swiper JS -->
+<script src="./assets/js/swiper.min.js"></script>
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/jquery.vide.js"></script>
+<script src="./assets/js/jquery.cookie.js"></script>
+<script src="./assets/js/i18next.js"></script>
+<script src="./assets/js/datastorage.js"></script>
+<script src="./assets/js/bootstrap.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    $(function () {
+
+        window.footerView = function() {
+            var text = '<a href="portfolio.html" data-i18n="footer.portfolio"></a>';
+            if (window.location.hash == '#main' || window.location.hash == '') {
+                text = '<a class="our-works" data-i18n="footer.works" onclick="nextSlide()">НАШИ РАБОТЫ</a>';
+                $('.footer').removeClass('footer--showed').removeClass('footer--hidden');
+            }else if(window.location.hash == '#contacts') {
+
+                $('.footer').addClass('footer--hidden').removeClass('footer--showed');
+            }else{
+
+                $('.footer').removeClass('footer--hidden').addClass('footer--showed');
+            }
+
+            $('.footer span').html(text);
+            $('body').i18n();
+        };
+
+        var swiper = new Swiper('.swiper-container', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true,
+            keyboardControl: true,
+            onSlideChangeEnd: function (swiperObj) {
+                footerView();
+            }
+        });
+
+        footerView();
+
+        $(window).on('hashchange', function(e){
+            footerView();
+        });
+
+        $('#goto-contacts').on('click touchstart', function () {
+            swiper.slideTo(13, 100);
+            $('.sidemenu-switcher').trigger('click');
+        });
+
+        $('#goto-main').on('click touchstart', function () {
+            swiper.slideTo(0, 100);
+            $('.sidemenu-switcher').trigger('click');
+        });
+
+        window.nextSlide = function () {
+            swiper.slideTo(1,100);
+        };
+
+        $('.sidemenu__header').each(function () {
+            this.onclick = function () {
+                swiper.slideTo(0, 100);
+                $('.sidemenu-switcher').trigger('click');
+            };
+        });
+
+        $('.sidemenu__vertical-logo').each(function () {
+            this.onclick = function () {
+                swiper.slideTo(0, 100);
+            };
+        });
+
+    });
+
+</script>
+</body>
+</html>

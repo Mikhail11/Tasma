@@ -1,0 +1,437 @@
+
+/*   открытая работа*/
+.openwork {
+    width: 100%;
+    height: 100%;
+    *zoom: 1;
+}
+
+.openwork__content {
+    margin-right: 80px;
+}
+
+.openwork__content__logo {
+    margin-top: 24px;
+    width: 112px;
+    height: 32px;
+    border: 1px solid red;
+}
+.openwork__content__text_big {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "BigCity Grotesque Pro Bold";
+    color: #ffffff;
+    margin-top: 158px;
+    transform: translate3d(0, 0, 0);
+}
+
+.openwork__content__text_small {
+    font-size: 18px;
+    line-height: 27px;
+    font-family: "BigCity Grotesque Pro Regular";
+    margin-top: 14px;
+    color: #ffffff;
+}
+
+.openwork__content__image {
+    width: 100%;
+    margin-top: 51px;
+}
+
+.openwork__content__image_boy {
+    height: 664px;
+}
+
+.openwork__content__text_box {
+    height: 102px;
+}
+
+.openwork__content__text_box_main {
+    margin-top: 77px;
+}
+
+.openwork__content__text_box_quarter {
+    margin-top:10px;
+    height: 60px;
+}
+
+.openwork__content__text_box_left {
+    font-size: 32px;
+    color: #ffffff;
+    font-family: "BigCity Grotesque Pro Bold";
+    width: 50%;
+    float:left;
+    line-height: 40px;
+}
+
+.openwork__content__text_box_left_half {
+    width:50%;
+}
+
+.openwork__content__text_left-align {
+    width: 100%;
+}
+
+.openwork__content__text_box_right {
+    width: 50%;
+    float:right;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "BigCity Grotesque Pro Regular";
+    line-height: 24px;
+}
+
+
+.openwork__content__text_box_right_first {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.openwork__content__swipe {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    opacity: .5;
+    background-color: dimgrey;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.openwork__content__swipe_text {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.openwork__content__swipe_arrow-left {
+    border: 1px solid blueviolet;
+    background-image: url('/assets/images/leftarrow.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.openwork__content__swipe_arrow-right {
+    border: 1px solid blueviolet;
+    background-image: url('/assets/images/rightarrow.svg');
+    width: 24px;
+    height: 24px;
+}
+
+
+.openwork__content__videocamera {
+    margin-top: 84px;
+    height: 664px;
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid red;
+}
+
+.openwork__content__text_left-align-small {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 24px;
+    font-family: "BigCity Grotesque Pro Regular";
+}
+
+.openwork__content__rect {
+    height: 1px;
+    margin-top: 82px;
+    background-color: grey;
+}
+
+.openwork__content_next-project {
+    font-size: 18px;
+    color: #f43d48;
+    line-height: 27px;
+    margin-top: 26px;
+}
+
+.openwork__content__text_big_margin {
+    margin-top: 81px;
+}
+
+.openwork__content__image_footer {
+    height: 188px;
+}
+
+@media all and (max-width: 1024px) {
+    .openwork__content__text_big {
+        margin-top: 102px;
+    }
+    .openwork__content__text_small {
+        margin-top: 10px;
+    }
+
+    .openwork__content__text_box_left {
+        width: 45%;
+    }
+
+    .openwork__content__text_box_right {
+        width:55%;
+    }
+
+    .openwork__content__text_box_left_half {
+        width:50%;
+    }
+
+}
+
+
+@media all and (max-width: 776px) {
+
+    .openwork__content {
+        margin-right: 32px;
+    }
+
+    .openwork__content__image_boy {
+        height: 544px;
+    }
+
+    .openwork__content__text_box_left {
+        width: 50%;
+    }
+
+    .openwork__content__text_box_right {
+        width:50%;
+        padding-left: 10px;
+    }
+
+    .openwork__content__swipe {
+        margin-top: 130px;
+    }
+
+    .openwork__content__videocamera {
+        height: 576px;
+        margin-top: 76px;
+    }
+
+    .openwork__content__text_box_left_half {
+        width:100%;
+    }
+
+    .openwork__content__text_box_quarter {
+        margin-top: 13px;
+    }
+
+    .openwork__content__text_small {
+        margin-top: 14px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .openwork__content {
+        margin-right: 32px;
+    }
+
+    .openwork__content__text_big {
+        font-size: 32px;
+        color: #ffffff;
+        line-height: 40px;
+        font-family: "BigCity Grotesque Pro Bold";
+        margin-top: 86px;
+    }
+
+    .openwork__content__text_small {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .openwork__content__image_boy {
+        height: 400px;
+        margin-top: 56px;
+    }
+
+    .openwork__content__text_box_main {
+        font-size: 24px;
+    }
+    .openwork__content__text_box_left {
+        width:100%;
+    }
+
+    .openwork__content__text_box_right {
+        width:100%;
+        padding-top: 14px;
+    }
+
+    .openwork__content__swipe {
+        margin-top: 250px;
+    }
+
+    .openwork__content__videocamera {
+        height: 424px;
+        margin-top: 17px;
+    }
+
+    .openwork__content__rect {
+        margin-top: 82px;
+    }
+
+    .openwork__content_next-project {
+        margin-top: 29px;
+    }
+
+    .openwork__content__text_big_margin {
+        margin-top: 81px;
+    }
+
+    .openwork__content__text_small {
+        margin-top: 5px;
+    }
+
+    .openwork__content__image {
+        margin-top: 48px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .openwork__content__text_big {
+        margin-top: 94px;
+    }
+
+    .openwork__content__text_small {
+        margin-top: 13px;
+    }
+    .openwork__content__image_boy {
+        height: 304px;
+        margin-top: 80px;
+    }
+
+    .openwork__content__text_box_main {
+        margin-top:85px;
+        line-height: 32;
+    }
+
+    .openwork__content__swipe {
+        display: none;
+    }
+
+    .openwork__content__videocamera {
+        margin-top: 500px;
+    }
+
+    .openwork__content__rect {
+        margin-top: 170px;
+    }
+
+    .openwork__content__text_box_left {
+        width:100%;
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+}
+
+
+
+/*  классы для openwork_2 a.k.a. study*/
+.study {
+    margin-top: 136px;
+    margin-bottom: 97px;
+}
+
+.study__image {
+    border: 1px solid green;
+    height: 554px;
+    width: 40%;
+    float: left;
+}
+
+.study__text {
+    float: right;
+    width: 60%;
+}
+
+.study__text_big {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 40px;
+    font-family: "BigCity Grotesque Pro Bold";
+    margin-left: 56px;
+    margin-top: 5px;
+    width:340px;
+}
+.study__text_small {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-family: "BigCity Grotesque Pro Regular";
+    margin-left: 56px;
+    margin-top: 24px;
+    width:340px;
+}
+
+.study__text_small_grey {
+    margin-top: 0px;
+}
+
+@media all and (max-width: 1024px) {
+    .study__image {
+        width: 48%;
+    }
+
+    .study__text {
+        width: 52%;
+    }
+}
+
+@media all and (max-width: 776px) {
+    .study {
+        margin-bottom: 129px;
+    }
+    .study__image {
+        width: 45%;
+        height: 512px;
+    }
+
+    .study__text {
+        width: 55%;
+    }
+
+    .study__text_big {
+        width:290px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .study__image {
+        width: 92%;
+        height: 512px;
+    }
+
+    .study__text {
+        float: left;
+        width:250px;
+        margin-top: 53px;
+    }
+
+    .study__text_big {
+        margin-left: 0px;
+        width: 270px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .study__text_small {
+        margin-left: 0px;
+    }
+    .study__text_small_grey {
+        margin-bottom: 86px;
+    }
+}
+@media all and (max-width: 320px) {
+    .study__image {
+        height: 408px;
+    }
+
+    .study__text_small_grey {
+        margin-bottom: 190px;
+    }
+}
