@@ -13,7 +13,7 @@ body {
 
 /* headers */
 .header {
-    font-family: 'BigCity Grotesque Pro Regular';
+    font-family: 'BigCity Grotesque Pro Regular', sans-serif;
     display: block;
 }
 
@@ -83,7 +83,7 @@ body {
 .link {
    font-size: 16px;
    line-height: 24px;
-   font-family: "BigCity Grotesque Pro Regular";
+   font-family: "BigCity Grotesque Pro Regular", sans-serif;
    color:#fff;
    text-decoration: none;
    outline: none;
@@ -99,7 +99,7 @@ body {
 /* buttons*/
 .btn {
     padding:13px 20px;
-    font-family: 'BigCity Grotesque Pro Regular';
+    font-family: "BigCity Grotesque Pro Regular", sans-serif;
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
@@ -111,7 +111,8 @@ body {
     border-style: solid;
     border-radius: 4px;
     margin-right:16px;
-    display:block;
+    margin-top:16px;
+    display:inline-block;
     cursor: pointer;
 }
 
@@ -165,7 +166,7 @@ body {
 
 .inpt {
     border-bottom: 1px solid rgba(255, 255, 255, .5);
-    font-family: 'BigCity Grotesque Pro Regular';
+    font-family: "BigCity Grotesque Pro Regular", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color:rgba(255, 255, 255, .5);
@@ -203,6 +204,10 @@ body {
        -ms-flex-direction:column;
            flex-direction:column;
 
+}
+.container_block {
+    width:100%;
+    display:block;
 }
 
 .container_row {
@@ -347,6 +352,8 @@ body {
     .container__elem_s_50 {
         width: 50%;
     }
+
+
 }
 
 @media (max-width:480px){
@@ -357,15 +364,42 @@ body {
     .container__item{
         padding:0;
     }
+
+    .container__elem_s_100 {
+        width: 100%;
+    }
     .header_h3 {
         line-height: 32px;
         font-size: 24px;
+    }
+
+    .link {
+        font-size: 14px;
     }
 
     .container_mbl_col {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .container_mbl_col-rev {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .container_clear {
+        margin:0;
+        padding:0;
+    }
+
+    .mbl_not_padded {
+        padding:0;
+    }
+
+
+    .inpt_mbl {
+        margin:0 0 42px 0;
+    }
+
 }
 
 @media (max-width: 320px) {
