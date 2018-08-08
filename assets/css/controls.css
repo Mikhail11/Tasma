@@ -215,6 +215,12 @@ body {
     align-items:center;
 }
 
+.container__sb {
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+}
+
 .container__item {
     margin-top: 42px;
     padding:0;
@@ -249,10 +255,119 @@ body {
     width:25%;
 }
 
+.container__elem_40 {
+    width:40%;
+}
+
+.container__elem_31 {
+    width:31%;
+}
+
 .container__elem_50:last-child {
     margin-right: 0;
 }
 
 .container__items_semi-downed {
     margin-top: 42px;
+}
+
+.container__quots {
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height:18px;
+    font-family: "BigCity Grotesque Pro Regular", sans-serif;
+
+}
+
+.container__quots_red {
+    border-color: #fff;
+    color:#f43d48;
+}
+
+.container__quots_white {
+    color: #fff;
+    border-color:#f43d48;
+}
+
+/* list */
+
+.iconed-list {
+    color:#fff;
+    font-family: "BigCity Grotesque Pro Regular", sans-serif;
+    font-size:14px;
+}
+
+.iconed-list__item {
+    margin:10px 0;
+}
+
+.iconed-list__item:before {
+    content: '';
+    width: 10px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-color: #f43d48;
+    transform: skewX(-30deg);
+}
+
+/*  icons */
+
+.icons {
+    background-size: contain;
+    display:block;
+    background-repeat: no-repeat;
+    width:18px;
+    height:18px;
+
+}
+
+.instagram {
+    background-image: url('../images/icons/instagram.png');
+}
+
+.vk {
+    background-image: url('../images/icons/vk.png');
+    background-position-y: 50%;
+}
+.vimeo {
+    background-image: url('../images/icons/vimeo.png');
+}
+.facebook {
+    background-image: url('../images/icons/facebook.png');
+}
+
+@media screen and (max-width:1280px) {
+
+}
+
+@media (max-width:776px) {
+    .container__elem_s_50 {
+        width: 50%;
+    }
+}
+
+@media (max-width:480px){
+    .container {
+        padding:24px;
+    }
+    .container__item-content,
+    .container__item{
+        padding:0;
+    }
+    .header_h3 {
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+    .container_mbl_col {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 320px) {
+
 }
