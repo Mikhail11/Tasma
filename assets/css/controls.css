@@ -89,6 +89,16 @@ body {
    outline: none;
 }
 
+.link_iconed:after {
+    content: '';
+    background-image: url(../images/icons/link.png);
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
+
 .link:hover,
 .link:active,
 .link:focus {
