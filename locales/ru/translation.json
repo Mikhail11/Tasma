@@ -4,6 +4,7 @@
   },
   "sidemenu": {
     "links": {
+      "main": "Главная",
       "about": "О нас",
       "portfolio": "Портфолио",
       "contacts": "Контакты"
@@ -17,9 +18,9 @@
     "mainpage": {
       "header": "Придумываем \nи воплощаем идеи \nв видео"
     },
-    "engineering": {
-      "header": "Машиностроение 2015",
-      "type": "Презентационный"
+    "swim": {
+      "header": "Промо-ролик SIYUM Kazan 2018",
+      "type": "Рекламный"
     },
     "thrones": {
       "header": "Казань в стиле &laquo;Игры престолов&raquo;",

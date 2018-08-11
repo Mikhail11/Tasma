@@ -4,6 +4,7 @@
   },
   "sidemenu": {
     "links": {
+      "main": "Main",
       "about": "About us",
       "portfolio": "Portfolio",
       "contacts": "Contacts"
@@ -18,8 +19,8 @@
       "header": "We invent and \nimplement ideas \nin video"
     },
     "engineering": {
-      "header": "Engineering 2015",
-      "type": "Presentation movie"
+      "header": "Presentation movie SIYUM Kazan 2018",
+      "type": "Promo"
     },
     "thrones": {
       "header": "Kazan in the style of &quot;Games of thrones&quot;",
