@@ -795,6 +795,12 @@ footer {
     text-align: center;
     margin-bottom: 24px;
 }
+
+.portfolio-footer__background {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
 /* === clearfix === */
 
 .portfolio:before,
@@ -809,6 +815,36 @@ footer {
     height: 1px;
     margin-top: -1px;
     visibility: hidden;
+}
+
+
+@media (max-width: 767px) {
+    .button-show-video {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .portfolio-footer__background {
+        flex-direction:column;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+    .portfolio-header {
+        padding: 24px !important;
+    }
+
+    .portfolio__item__menu-wrapper {
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .portfolio__item__menu__header {
+       font-size: 24px !important;
+       line-height: 32px !important;
+    }
 }
 
 /* === clearfix === */
