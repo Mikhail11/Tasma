@@ -67,27 +67,51 @@ body { -ms-overflow-style: none; }
 /* фф (свойство больше не работает, других способов тоже нет)*/
 body { overflow: -moz-scrollbars-none; }
 
-.button {}
-.button-show-video {
-    display: inline-block;
-    padding: 13px 25px;
-    border: 1px solid #ffffff;
-    font-family: "BigCity Grotesque Pro Regular";
-    font-size: 12px;
-    letter-spacing: .9px;
-    cursor: url('/assets/images/hand.png') 6 1, pointer;
-    color: #000000;
-
-    -webkit-transition: all .55s ease;
-       -moz-transition: all .55s ease;
-        -ms-transition: all .55s ease;
-         -o-transition: all .55s ease;
-            transition: all .55s ease;
+.header__logo {
+    width:112px;
+    height:32px;
+    position:absolute;
+    top: 30px;
+    left: 32px;
+    z-index: 50;
+    background-image: url(../images/long.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all .2s ease-in-out;
 }
 
-.button-show-video:hover {
-    background-color: transparent;
-    color: #ffffff;
+.header__logo_short {
+    background-image: url(../images/short.png);
+    width:23px;
+}
+
+.header__logo
+
+.logo {
+    width:100%;
+}
+
+
+.button {}
+.button-show-video {
+    font-family: "BigCity Grotesque Pro Regular", sans-serif;
+    font-size: 14px;
+    align-self: flex-end;
+    cursor: url('/assets/images/hand.png') 6 1, pointer;
+    color: #fff;
+    visibility: hidden;
+    margin-bottom: 8px;
+}
+
+.button-show-video::after {
+    content:'';
+    background-image: url(../images/arrow-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display:inline-block;
+    width:16px;
+    height:16px;
+    vertical-align: middle;
 }
 
 .button-show-video--large {
@@ -570,6 +594,18 @@ footer {
 
 /**-------- contacts ----------------**/
 /**-------- portfolio ----------------**/
+.portfolio-header {
+    margin-top: 30px;
+    padding:48px !important;
+}
+
+.portfolio-header__content {
+    flex-wrap: wrap;
+}
+.portfolio-header__items {
+    margin-left: 32px;
+}
+
 .portfolio {
     width: 100%;
     *zoom: 1;
@@ -589,19 +625,18 @@ footer {
     width: 100%;
     text-align: center;
     color: #ffffff;
-
-    visibility: hidden;
-
-    transition: .7s ease all;
 }
 
 .portfolio__item__menu__header {
-    transform: translate3d(0, 50%, 0);
+     text-align: left;
 }
 
 .portfolio__item__menu__type {
-    transform: translate3d(0, 65%, 0);
-    font-family: "BigCity Grotesque Pro Regular";
+    font-family: "BigCity Grotesque Pro Regular", sans-serif;
+    text-align:left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity:0.5;
 }
 
 .portfolio__item__menu__button {
@@ -615,29 +650,8 @@ footer {
     font-family: "BigCity Grotesque Pro Bold";
 }
 
-.portfolio__item__menu__type {
-    margin-top: 5px;
-}
-
 .portfolio__item__menu__button {
     margin-top: 20px;
-}
-
-.portfolio__item:hover .portfolio__item__menu__header,
-.portfolio__item:hover .portfolio__item__menu__type,
-.portfolio__item:hover .portfolio__item__menu__button {
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
-}
-
-.portfolio__item:hover .portfolio__item__menu__header {
-    transition-delay: .4s;
-}
-.portfolio__item:hover .portfolio__item__menu__type {
-    transition-delay: .4s;
-}
-.portfolio__item:hover .portfolio__item__menu__button {
-    transition-delay: .4s;
 }
 
 .portfolio__item__bg {
@@ -695,16 +709,20 @@ footer {
 }
 
 .portfolio__item__menu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+   width:80%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-align:start;
+    -ms-flex-align:start;
+    align-items:flex-start;
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    justify-content:flex-end;
 }
 
 .portfolio__item__bg {
@@ -719,6 +737,12 @@ footer {
 }
 
 .portfolio__item__menu-wrapper {
+
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+
+    padding:24px 48px;
     background-color: rgba(0, 0, 0, .21);
 
     -webkit-transform: translateY(-100%);
@@ -728,6 +752,9 @@ footer {
     transform: translateY(-100%);
 }
 
+.portfolio__item__menu-wrapper:hover  .button-show-video {
+    visibility: visible;
+}
 .portfolio__item:hover .portfolio__item__menu-wrapper {
 
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
@@ -743,7 +770,31 @@ footer {
     transform: translateY(-100%);
 }
 
+.portfolio-footer {
+    padding: 32px 48px;
+}
 
+.portfolio-footer__contacts {
+    margin-top: 0;
+    -webkit-box-pack:justify !important;
+    -ms-flex-pack:justify !important;
+    justify-content:space-between !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.portfolio-footer__label {
+    margin-top: 35px;
+}
+
+.portfolio-footer__breef-btn {
+    align-self: center;
+    margin:0 !important;
+}
+
+.portfolio-footer__text {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 24px;
+}
 /* === clearfix === */
 
 .portfolio:before,

@@ -60,48 +60,68 @@
 <div class="content">
 
      <div class="openwork__content">
-            <div class="openwork__content__logo"></div>
-            <div class="openwork__content__text_big"> Жилой комплекс «Южный бульвар»</div>
-            <div class="openwork__content__text_small"> Имиджевый/рекламный</div>
-            <div class="openwork__content__image openwork__content__image_boy">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZntQCNvY5g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="openwork__content__logo"></div>
+        <div class="openwork__content__text_big"> Жилой комплекс «Южный бульвар»</div>
+        <div class="openwork__content__text_small"> Имиджевый/рекламный</div>
+
+
+        <div id="carousel" class="openwork__content_carousel">
+            <div class="openwork__content_slider">
+                <ul>
+                    <li>
+                        <div id="slider_item" class="openwork__content_slider_item">
+                            <div class="openwork__content__image openwork__content__image_boy ">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZntQCNvY5g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <div class="openwork__content__text_box">
+                                <div class="openwork__content__text_box_left">
+                                    A respectful response </br> to function and setting
+                                </div>
+                                <div class="openwork__content__text_box_right">
+                                    <div class="openwork__content__text_box_right_first"> A sincere interest in intelligent and sustainable design extends to every aspect of working.
+                                        Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
+                                        ensure they function with ease and are pleasing to our eyes.</div>
+                                    <div class="openwork__content__text_box_right_second"> In seeking new locations, our first considerations is to work with what already exists.
+                                        It is our intention to weave ourselves into the fabric of place and add something of merit rather than impose a discordant presence,
+                                        and our consistent to use a locally relevant design vocabulary. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="openwork__content_slider_item">
+                            <div class="openwork__content__videocamera">
+                                videocamera.img
+                            </div>
+                            <div class="openwork__content__text_box_quarter">
+                                <div class="openwork__content__text_box_left">
+                                    <div class="openwork__content__text_left-align-small">1/4</div>
+                                </div>
+                            </div>
+                            <div class="openwork__content__text_box">
+                                <div class="openwork__content__text_box_left openwork__content__text_box_left_half">
+                                    <div class="openwork__content__text_left-align-small">
+                                        A sincere interest in intelligent and sustainable design extends to every aspect of working.
+                                        Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
+                                        ensure they function with ease and are pleasing to our eyes.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="openwork__content__text_box openwork__content__text_box_main">
-                <div class="openwork__content__text_box_left">
-                    <div class="openwork__content__text_left-align"> A respectful response </br> to function and setting</div>
-                </div>
-                <div class="openwork__content__text_box_right">
-                    <div> A sincere interest in intelligent and sustainable design extends to every aspect of working.
-                        Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
-                        ensure they function with ease and are pleasing to our eyes.</div>
-                    <div class="openwork__content__text_box_right_first"> In seeking new locations, our first considerations is to work with what already exists.
-                        It is our intention to weave ourselves into the fabric of place and add something of merit rather than impose a discordant presence,
-                        and our consistent to use a locally relevant design vocabulary. </div>
-                </div>
-            </div>
-            <div class="openwork__content__swipe">
-                <div class="openwork__content__swipe_arrow-left"></div>
+        </div>
+
+
+
+        <div class="openwork__content__swipe">
+                <button id="prev" class="openwork__content__swipe_arrow-left">сюда</button>
                 <div class="openwork__content__swipe_text"> Жилой комплекс «Южный бульвар»</div>
-                <div class="openwork__content__swipe_arrow-right"></div>
-            </div>
-            <div class="openwork__content__videocamera">
-                  videocamera.img
-            </div>
-             <div class="openwork__content__text_box_quarter">
-                 <div class="openwork__content__text_box_left">
-                     <div class="openwork__content__text_left-align-small">1/4</div>
-                 </div>
-             </div>
-            <div class="openwork__content__text_box">
-                <div class="openwork__content__text_box_left openwork__content__text_box_left_half">
-                    <div class="openwork__content__text_left-align-small">
-                        A sincere interest in intelligent and sustainable design extends to every aspect of working.
-                        Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
-                        ensure they function with ease and are pleasing to our eyes.
-                    </div>
-                </div>
-            </div>
-         <div class="openwork__content__rect"></div>
+                <button id="next" class="openwork__content__swipe_arrow-right">туда</button>
+        </div>
+
+        <div class="openwork__content__rect"></div>
         <div class="openwork__content_next-project">Следующий проект</div>
         <div class="openwork__content__text_big openwork__content__text_big_margin"> Сармановский район</div>
         <div class="openwork__content__text_small">Имиджевый</div>
@@ -129,6 +149,45 @@
 <script src="./assets/js/i18next.js"></script>
 <script src="./assets/js/datastorage.js"></script>
 <script src="./assets/js/bootstrap.js"></script>
+
+<script>
+    var lis = document.getElementsByTagName('li');
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].style.position = 'relative';
+        var span = document.createElement('span');
+        // обычно лучше использовать CSS-классы,
+        // но этот код - для удобства разработки, так что не будем трогать стили
+        span.style.cssText = 'position:absolute;left:0;top:0';
+        span.innerHTML = i + 1;
+        lis[i].appendChild(span);
+    }
+
+    /* конфигурация */
+    var width = document.getElementById('slider_item').offsetWidth    ; // ширина изображения
+    var count = 1; // количество изображений
+
+
+    var carousel = document.getElementById('carousel');
+    var list = carousel.querySelector('ul');
+    var listElems = carousel.querySelectorAll('li');
+
+    var position = 0; // текущий сдвиг влево
+
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+
+
+    prev.onclick = function() {
+        // сдвиг влево
+        position = Math.min(position + width * count, 0);
+        list.style.marginLeft = position + 'px';
+    };
+    next.onclick = function() {
+        // сдвиг вправо
+        position = Math.max(position - width * count, -width * (listElems.length - count));
+        list.style.marginLeft = position + 'px';
+    };
+</script>
 
 </body>
 </html>

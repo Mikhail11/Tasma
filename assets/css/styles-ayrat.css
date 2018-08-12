@@ -8,6 +8,8 @@
 
 .openwork__content {
     margin-right: 80px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .openwork__content__logo {
@@ -33,9 +35,63 @@
     color: #ffffff;
 }
 
+.openwork__content_carousel {
+    width:2200px;
+    height: 1100px;
+}
+.openwork__content_carousel .openwork__content_slider_item {
+    display: block;
+}
+
+.openwork__content_slider {
+    height: 1020px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.openwork__content_slider ul {
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    font-size: 0;
+}
+
+.openwork__content_slider li {
+    display: inline-block;
+}
+
+.openwork__content_slider_item {
+    width:1185px;
+    border: 1px solid red;
+}
+
+.openwork__content__swipe_arrow-left,  .openwork__content__swipe_arrow-right {
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+}
+
+.openwork__content__swipe_arrow-left,  .openwork__content__swipe_arrow-right:focus {
+    outline: none;
+}
+
+.openwork__content__swipe_arrow-left,  .openwork__content__swipe_arrow-right:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+
+
 .openwork__content__image {
     width: 100%;
-    margin-top: 51px;
 }
 
 .openwork__content__image_boy {
@@ -44,14 +100,15 @@
 
 .openwork__content__text_box {
     height: 102px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-direction:column;
+    flex-wrap: wrap;
 }
 
-.openwork__content__text_box_main {
-    margin-top: 77px;
-}
 
 .openwork__content__text_box_quarter {
-    margin-top:10px;
     height: 60px;
 }
 
@@ -59,48 +116,49 @@
     font-size: 32px;
     color: #ffffff;
     font-family: "BigCity Grotesque Pro Bold";
-    width: 50%;
-    float:left;
     line-height: 40px;
+
 }
 
-.openwork__content__text_box_left_half {
-    width:50%;
-}
 
 .openwork__content__text_left-align {
     width: 100%;
 }
 
 .openwork__content__text_box_right {
-    width: 50%;
-    float:right;
     font-size: 16px;
     color: #ffffff;
     font-family: "BigCity Grotesque Pro Regular";
     line-height: 24px;
+    margin-left: 188px;
+    width: 473px;
 }
 
 
 .openwork__content__text_box_right_first {
+
+ }
+
+.openwork__content__text_box_right_second {
     margin-top: 10px;
 }
 
 
-
-
-
+.openwork__content__text_box_left_half {
+    width:50%;
+}
 
 .openwork__content__swipe {
     width: 100%;
     height: 70px;
-    margin-top: 20px;
     opacity: .5;
     background-color: dimgrey;
     text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    top: 1177px;
 }
 
 .openwork__content__swipe_text {
@@ -109,27 +167,10 @@
     line-height: 27px;
 }
 
-.openwork__content__swipe_arrow-left {
-    border: 1px solid blueviolet;
-    background-image: url('/assets/images/leftarrow.svg');
-    width: 24px;
-    height: 24px;
-}
-
-.openwork__content__swipe_arrow-right {
-    border: 1px solid blueviolet;
-    background-image: url('/assets/images/rightarrow.svg');
-    width: 24px;
-    height: 24px;
-}
-
-
 .openwork__content__videocamera {
-    margin-top: 84px;
     height: 664px;
     color: #ffffff;
     font-size: 16px;
-    border: 1px solid red;
 }
 
 .openwork__content__text_left-align-small {
@@ -141,7 +182,6 @@
 
 .openwork__content__rect {
     height: 1px;
-    margin-top: 82px;
     background-color: grey;
 }
 
@@ -160,7 +200,15 @@
     height: 188px;
 }
 
+
+
+
+
 @media all and (max-width: 1024px) {
+    .openwork__content_slider_item {
+        width:928px;
+    }
+
     .openwork__content__text_big {
         margin-top: 102px;
     }
@@ -174,11 +222,17 @@
 
     .openwork__content__text_box_right {
         width:55%;
+        margin-left: 0px;
     }
 
     .openwork__content__text_box_left_half {
         width:50%;
     }
+    .openwork__content__text_box_quarter {
+        height: 0;
+    }
+
+
 
 }
 
@@ -194,11 +248,11 @@
     }
 
     .openwork__content__text_box_left {
-        width: 50%;
+        width: 35%;
     }
 
     .openwork__content__text_box_right {
-        width:50%;
+        width:65%;
         padding-left: 10px;
     }
 

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/controls.css">
   <link rel="shortcut icon" href="assets/images/favicon-32.png" type="image/png">
 
     <!-- facebook open graph -->
@@ -31,6 +32,7 @@
 
 </head>
 <body>
+<div class="header__logo"></div>
 
 <div class="sidemenu-switcher" sm-state="1">
   <div class="con">
@@ -60,23 +62,30 @@
 
 
 <div class="content">
+  <div class="portfolio-header container">
+      <div class=" portfolio-header__content container__item-content container_block">
+        <span class="link portfolio-header__items">Все</span>
+        <span class="link portfolio-header__items">Презентационные</span>
+        <span class="link portfolio-header__items">Анимация</span>
+        <span class="link portfolio-header__items">Имиджевый</span>
+        <span class="link portfolio-header__items link_iconed">Больше работ на Vimeo</span>
+      </div>
+  </div>
   <div class="portfolio">
     <div class="portfolio__item">
       <div class="portfolio__item__bg"  style="background-image: url('assets/images/portfolio/Engineering.jpg');">
       </div>
       <div class="portfolio__item__menu-wrapper">
         <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.engineering.header">
-            Ролик &laquo;Машиностроение&raquo;
-          </div>
           <div class="portfolio__item__menu__type" data-i18n="portfolio.engineering.type">
             Ролик
           </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="0">
-              ПОСМОТРЕТЬ
-            </div>
+          <div class="portfolio__item__menu__header header header_h2" data-i18n="[html]portfolio.engineering.header">
+            Ролик &laquo;Машиностроение&raquo;
           </div>
+        </div>
+        <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="0">
+          Подробнее
         </div>
       </div>
     </div>
@@ -86,17 +95,15 @@
       </div>
       <div class="portfolio__item__menu-wrapper">
         <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.thrones.header">
-            Ролик &laquo;Игра престолов&raquo;
-          </div>
           <div class="portfolio__item__menu__type" data-i18n="portfolio.thrones.type">
             Ролик
           </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video"  video-id="1">
-              ПОСМОТРЕТЬ
-            </div>
+          <div class="portfolio__item__menu__header header header_h2" data-i18n="[html]portfolio.thrones.header">
+            Ролик &laquo;Игра престолов&raquo;
           </div>
+        </div>
+        <div class="button-show-video" mw-target="#31" data-i18n="play-video"  video-id="1">
+          Подробнее
         </div>
       </div>
     </div>
@@ -105,17 +112,15 @@
       <div class="portfolio__item__bg"  style="background-image: url('assets/images/portfolio/Sarmanovo.jpg');"></div>
       <div class="portfolio__item__menu-wrapper">
         <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.sarmanovo.header">
-            Ролик &laquo;Сарманово&raquo;
-          </div>
           <div class="portfolio__item__menu__type" data-i18n="portfolio.sarmanovo.type">
             Ролик
           </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="2">
-              ПОСМОТРЕТЬ
-            </div>
+          <div class="portfolio__item__menu__header header header_h2" data-i18n="[html]portfolio.sarmanovo.header">
+            Ролик &laquo;Сарманово&raquo;
           </div>
+        </div>
+        <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="2">
+          Подробнее
         </div>
       </div>
     </div>
@@ -124,103 +129,41 @@
       <div class="portfolio__item__bg"  style="background-image: url('assets/images/portfolio/Nominees.jpg');"></div>
       <div class="portfolio__item__menu-wrapper">
         <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.vyatka.header">
-            Ролик &laquo;Номинанты&raquo;
-          </div>
           <div class="portfolio__item__menu__type" data-i18n="portfolio.vyatka.type">
             Ролик
           </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="3">
-              ПОСМОТРЕТЬ
-            </div>
+          <div class="portfolio__item__menu__header header header_h2" data-i18n="[html]portfolio.vyatka.header">
+            Ролик &laquo;Номинанты&raquo;
           </div>
+        </div>
+        <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="3">
+          Подробнее
         </div>
       </div>
     </div>
-
-    <div class="portfolio__item">
-      <div class="portfolio__item__bg"  style="background-image: url('assets/images/portfolio/south.png');"></div>
-      <div class="portfolio__item__menu-wrapper">
-        <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.south.header">
-            Выступление Миниханова
-          </div>
-          <div class="portfolio__item__menu__type" data-i18n="portfolio.south.type">
-            Ролик
-          </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="4">
-              ПОСМОТРЕТЬ
-            </div>
-          </div>
-        </div>
+  </div>
+  <div class="portfolio-footer">
+    <div class="portfolio-footer__call container">
+      <span class="portfolio-footer__text header header_h3 header_white">Оставьте заявку</span>
+      <a href="breef.html" class="portfolio-footer__breef-btn btn btn_red">Заполните бриф</a>
+    </div>
+    <div class="portfolio-footer__contacts container__item container container_row container_mbl_col">
+      <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
+        <span class="header header_s header_red-3">Телефон</span>
+        <h4 class="header header_h4 header_white header_bold container__item-content">+7(843)226-55-57</h4>
+      </div>
+      <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
+        <span class="header header_s header_red-3">Почта</span>
+        <a href="mailto:arttasms@gmail.com" class="header header_h4 header_white header_bold container__item-content">arttasms@gmail.com</a>
+      </div>
+      <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
+        <span class="header header_s header_red-3">Дополнительно</span>
+        <a href="" class="link_iconed header header_bold container__item-content">Скачать презентацию</a>
       </div>
     </div>
-
-    <div class="portfolio__item">
-      <div class="portfolio__item__bg"  style="background-image: url('assets/images/portfolio/backstage.png');">
-      </div>
-      <div class="portfolio__item__menu-wrapper">
-        <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.backstage.header">
-            Выступление Миниханова
-          </div>
-          <div class="portfolio__item__menu__type" data-i18n="portfolio.backstage.type">
-            Ролик
-          </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="5">
-              ПОСМОТРЕТЬ
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="portfolio__item">
-      <div class="portfolio__item__bg"  style="background-image: url('assets/images/portfolio/oic.png');">
-      </div>
-      <div class="portfolio__item__menu-wrapper">
-        <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.oicyouthforum.header">
-            Выступление Миниханова
-          </div>
-          <div class="portfolio__item__menu__type" data-i18n="portfolio.oicyouthforum.type">
-            Ролик
-          </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="6">
-              ПОСМОТРЕТЬ
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="portfolio__item">
-      <div class="portfolio__item__bg" style="background-image: url('assets/images/portfolio/rules.png');">
-      </div>
-      <div class="portfolio__item__menu-wrapper">
-        <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__header" data-i18n="[html]portfolio.rules.header">
-            Ролик &laquo;Вэлли&raquo;
-          </div>
-          <div class="portfolio__item__menu__type" data-i18n="portfolio.rules.type">
-            Ролик
-          </div>
-          <div class="portfolio__item__menu__button">
-            <div class="button-show-video" mw-target="#31" data-i18n="play-video" video-id="7">
-              ПОСМОТРЕТЬ
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="portfolio__item portfolio__item--empty">
-      <div class="portfolio__item__yourvideo" data-i18n="[html]portfolio.empty"></div>
-    </div>
+    <span class="portfolio-footer__label   header header_h4 header_white-t">
+      © Медиа Студия «Тасма»
+    </span>
   </div>
   <div class="preloader">
     <div class="loader">

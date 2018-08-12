@@ -165,4 +165,20 @@ $(function () {
   $('.presentation a').click(function(){
     location.href = $(this).attr('href');
   });
+
+  $('body').on('scroll', function() {
+    if ($('body').scrollTop() > 0) {
+        $('.header__logo').addClass('header__logo_short');
+    } else {
+        $('.header__logo').removeClass('header__logo_short');
+    }
+  });
+
+  $('.content').on('scroll', function() {
+      if ($('.content').scrollTop() > 0) {
+          $('.header__logo').addClass('header__logo_short');
+      } else {
+          $('.header__logo').removeClass('header__logo_short');
+      }
+  });
 });
