@@ -131,17 +131,19 @@ $(function () {
       url = 'https://www.youtube.com/embed/' + res.url;
     }else if(res.type == 'vimeo') {
       url = 'https://player.vimeo.com/video/' + res.url;
+    } else if( res.type === 'free') {
+      url = res.url;
     }
 
     $('<div/>').addClass('overlay')
       .appendTo('body');
-    $('<div/>').addClass('video-container')
+    var videoContainer = $('<div/>').addClass('video-container')
       .appendTo('.overlay');
     $('<div/>').addClass('overlay__close')
       .click(function () {
         $('.overlay').remove();
       })
-      .appendTo('.overlay');
+      .appendTo(videoContainer);
 
     $('<iframe/>').attr({
       src: url,
@@ -161,6 +163,18 @@ $(function () {
       makeModal(resource);
     };
   });
+
+  $('.video_btn').on('click', function(event){
+    event.stopImmediatePropagation();
+    var url = $(event.target).data('video');
+    if(url){
+        makeModal({
+            url: url,
+            type:'free'
+        });
+    }
+  });
+
 
   $('.presentation a').click(function(){
     location.href = $(this).attr('href');

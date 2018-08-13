@@ -238,9 +238,12 @@
 
 
 @media all and (max-width: 776px) {
-
     .openwork__content {
         margin-right: 32px;
+    }
+
+    .openwork__content_slider_item {
+        width:680px;
     }
 
     .openwork__content__image_boy {
@@ -248,16 +251,16 @@
     }
 
     .openwork__content__text_box_left {
-        width: 35%;
+        width: 45%;
     }
 
     .openwork__content__text_box_right {
-        width:65%;
+        width:55%;
         padding-left: 10px;
     }
 
     .openwork__content__swipe {
-        margin-top: 130px;
+        margin-top: 0px;
     }
 
     .openwork__content__videocamera {
@@ -283,6 +286,10 @@
         margin-right: 32px;
     }
 
+    .openwork__content_slider_item {
+        width:425px;
+    }
+
     .openwork__content__text_big {
         font-size: 32px;
         color: #ffffff;
@@ -303,6 +310,11 @@
         margin-top: 56px;
     }
 
+    .openwork__content__text_box {
+        display: flex;
+        flex-direction: column;
+    }
+
     .openwork__content__text_box_main {
         font-size: 24px;
     }
@@ -311,12 +323,13 @@
     }
 
     .openwork__content__text_box_right {
-        width:100%;
-        padding-top: 14px;
+        width: 100%;
+        margin-top: 90px;
+        margin-left: -430px;
     }
 
     .openwork__content__swipe {
-        margin-top: 250px;
+        margin-top: -80px;
     }
 
     .openwork__content__videocamera {
@@ -325,7 +338,7 @@
     }
 
     .openwork__content__rect {
-        margin-top: 82px;
+        margin-top: -80px;
     }
 
     .openwork__content_next-project {
@@ -346,6 +359,20 @@
 }
 
 @media all and (max-width: 320px) {
+    .openwork__content_slider_item {
+        width:265px;
+    }
+
+    .openwork__content_slider_item {
+        margin-top:-540px;
+    }
+
+    .openwork__content__text_box_right {
+        width: 100%;
+        margin-top: 90px;
+        margin-left: -270px;
+    }
+
     .openwork__content__text_big {
         margin-top: 94px;
     }
@@ -372,7 +399,7 @@
     }
 
     .openwork__content__rect {
-        margin-top: 170px;
+        margin-top: 0px;
     }
 
     .openwork__content__text_box_left {
