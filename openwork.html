@@ -4,32 +4,29 @@
     <meta charset="utf-8">
     <title>Медиа студия "Тасма"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="./assets/css/swiper.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/styles-ayrat.css">
-    <link rel="shortcut icon" href="/assets/images/favicon-32.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/controls.css">
+    <link rel="shortcut icon" href="assets/images/favicon-32.png" type="image/png">
 </head>
-
 <body>
-<div class="sidemenu" style="-webkit-overflow-scrolling: touch;">
-    <div class="sidemenu-switcher" sm-state="1">
-        <div class="con">
-            <div class="bar top"></div>
-            <div class="bar middle"></div>
-            <div class="bar bottom"></div>
-        </div>
+<div class="header__logo"></div>
+
+<div class="sidemenu-switcher" sm-state="1">
+    <div class="con">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
     </div>
-    <div class="sidemenu__header"></div>
-
-    <div class="sidemenu__vertical-logo"></div>
-
+</div>
+<div class="sidemenu" style="-webkit-overflow-scrolling: touch;">
     <ul class="sidemenu__content">
-        <li class="sidemenu__content__item sidemenu__content__item--fst" id="mn"><a id="goto-main" href="index.html#main" data-i18n="sidemenu.links.about">О НАС</a></li>
-        <li class="sidemenu__content__item sidemenu__content__item--sec"><a href="portfolio.html" data-i18n="sidemenu.links.portfolio">ПОРТФОЛИО</a></li>
-        <li class="sidemenu__content__item sidemenu__content__item--thr" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-i18n="sidemenu.links.contacts">КОНТАКТЫ</a></li>
-        <li class="sidemenu__content__item sidemenu__content__item--frth"><a href="openwork.html" data-i18n="sidemenu.links.new_work">Открытая Работа</a></li>
+        <li class="sidemenu__content__item" id="mn"><a id="goto-main" href="index.html#main" data-i18n="sidemenu.links.main">Главная</a></li>
+        <li class="sidemenu__content__item"><a href="portfolio.html" data-i18n="sidemenu.links.portfolio">Портфолио</a></li>
+        <li class="sidemenu__content__item"><a href="clients.html" data-i18n="sidemenu.links.about">О нас</a></li>
+        <li class="sidemenu__content__item" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-i18n="sidemenu.links.contacts">Контакты</a></li>
     </ul>
 
     <div class="sidemenu__footer">
@@ -38,154 +35,151 @@
             <div switchLang="en" class="lng-switch__item">en</div>
             <div class="lng-switch__bound"></div>
         </div>
-
-        <div class="sidemenu__footer__contacts">
-            <div><a href="tel:+78432265557">+7(843)226-55-57</a></div>
-            <div><a href="mailto:arttasma@gmail.com" class="sidemenu__footer__contacts__email">arttasma@gmail.com</a></div>
-        </div>
-
-        <div class="sidemenu__footer__copyrights">
-            <div data-i18n="[html]sidemenu.copyrights.tasma">&copy; 2016, МЕДИА СТУДИЯ &laquo;ТАСМА&raquo;</div>
-            <div data-i18n="[html]sidemenu.copyrights.fsep">Дизайн и разработка в <a target="_blank" href="http://1-sep.com">FIRST SEP</a></div>
-        </div>
-    </div>
-    <div class="lng-switch lng-switch--sticked">
-        <div switchLang="ru" class="lng-switch__item">ru</div>
-        <div switchLang="en" class="lng-switch__item">en</div>
-        <div class="lng-switch__bound"></div>
     </div>
 </div>
-<div class="menu-overlay"></div>
 
-<div class="content">
-
-     <div class="openwork__content">
-        <div class="openwork__content__logo"></div>
-        <div class="openwork__content__text_big"> Жилой комплекс «Южный бульвар»</div>
-        <div class="openwork__content__text_small"> Имиджевый/рекламный</div>
-
-
-        <div id="carousel" class="openwork__content_carousel">
-            <div class="openwork__content_slider">
-                <ul>
-                    <li>
-                        <div id="slider_item" class="openwork__content_slider_item">
-                            <div class="openwork__content__image openwork__content__image_boy ">
-                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZntQCNvY5g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-                            <div class="openwork__content__text_box">
-                                <div class="openwork__content__text_box_left">
-                                    A respectful response </br> to function and setting
-                                </div>
-                                <div class="openwork__content__text_box_right">
-                                    <div class="openwork__content__text_box_right_first"> A sincere interest in intelligent and sustainable design extends to every aspect of working.
-                                        Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
-                                        ensure they function with ease and are pleasing to our eyes.</div>
-                                    <div class="openwork__content__text_box_right_second"> In seeking new locations, our first considerations is to work with what already exists.
-                                        It is our intention to weave ourselves into the fabric of place and add something of merit rather than impose a discordant presence,
-                                        and our consistent to use a locally relevant design vocabulary. </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="openwork__content_slider_item">
-                            <div class="openwork__content__videocamera">
-                                videocamera.img
-                            </div>
-                            <div class="openwork__content__text_box_quarter">
-                                <div class="openwork__content__text_box_left">
-                                    <div class="openwork__content__text_left-align-small">1/4</div>
-                                </div>
-                            </div>
-                            <div class="openwork__content__text_box">
-                                <div class="openwork__content__text_box_left openwork__content__text_box_left_half">
-                                    <div class="openwork__content__text_left-align-small">
-                                        A sincere interest in intelligent and sustainable design extends to every aspect of working.
+<div class="container">
+    <div class="container__item container__items_downed container">
+        <h3 class="header header_h3 header_white header_bold">Жилой комплекс «Южный бульвар»</h3>
+        <div class="container__item-content-half container__elem_s_100">
+            <p class="header header_h4 header_white-t"> Имиджевый/рекламный</p>
+        </div>
+    </div>
+    <div class="container__item container ">
+        <div class="container__item-content container_block">
+            <img class="container__elem_100" src="assets/images/portfolio/Engineering.jpg"/>
+        </div>
+        <div class="container__item container__items_downed container container_row">
+            <span class="container__elem_50 header header_h3 header_white container__item_align-top">
+                A respectful response to function and setting
+            </span>
+            <div class="container__elem_50 container container__item-content container_not-margin">
+                <span class="header header_p header_white">
+                    A sincere interest in intelligent and sustainable design extends to every aspect of working.
                                         Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
                                         ensure they function with ease and are pleasing to our eyes.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                </span>
+                <span class="header header_p header_white">
+                    In seeking new locations, our first considerations is to work with what already exists.
+                                        It is our intention to weave ourselves into the fabric of place and add something of merit rather than impose a discordant presence,
+                                        and our consistent to use a locally relevant design vocabulary.
+                </span>
+
             </div>
         </div>
-
-        <div class="openwork__content__rect"></div>
-        <div class="openwork__content_next-project">Следующий проект</div>
-        <div class="openwork__content__text_big openwork__content__text_big_margin"> Сармановский район</div>
-        <div class="openwork__content__text_small">Имиджевый</div>
-        <div class="openwork__content__image openwork__content__image_footer">
-            <img  src="/assets/images/car.jpg" alt="bugatti">
+    </div>
+    <div class="container__item container">
+        <div class="container__item-content container_block">
+            <img class="container__elem_100" src="assets/images/portfolio/Engineering.jpg"/>
         </div>
+        <div class="container__item container__items_downed container container_row">
+            <span class="container__elem_50 header header_h3 header_white container__item_align-top">
+                A respectful response to function and setting
+            </span>
+            <div class="container__elem_50 container container__item-content container_not-margin">
+                <span class="header header_p header_white">
+                    A sincere interest in intelligent and sustainable design extends to every aspect of working.
+                                        Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
+                                        ensure they function with ease and are pleasing to our eyes.
+                </span>
+                <span class="header header_p header_white">
+                    In seeking new locations, our first considerations is to work with what already exists.
+                                        It is our intention to weave ourselves into the fabric of place and add something of merit rather than impose a discordant presence,
+                                        and our consistent to use a locally relevant design vocabulary.
+                </span>
 
-     </div>
-
-    <div class="openwork__content__swipe">
-        <button id="prev" class="openwork__content__swipe_arrow-left">сюда</button>
-        <div class="openwork__content__swipe_text"> Жилой комплекс «Южный бульвар»</div>
-        <button id="next" class="openwork__content__swipe_arrow-right">туда</button>
+            </div>
+        </div>
     </div>
 
 
+
+
 </div>
-
-
-
-
-
 
 
 <!-- Swiper JS -->
-<script src="./assets/js/swiper.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
 
-<script src="./assets/js/jquery.min.js"></script>
-<script src="./assets/js/jquery.vide.js"></script>
-<script src="./assets/js/jquery.cookie.js"></script>
-<script src="./assets/js/i18next.js"></script>
-<script src="./assets/js/datastorage.js"></script>
-<script src="./assets/js/bootstrap.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.vide.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/i18next.js"></script>
+<script src="assets/js/datastorage.js"></script>
+<script src="assets/js/bootstrap.js"></script>
 
+<!-- Initialize Swiper -->
 <script>
-    var lis = document.getElementsByTagName('li');
-    for (var i = 0; i < lis.length; i++) {
-        lis[i].style.position = 'relative';
-        var span = document.createElement('span');
-        // обычно лучше использовать CSS-классы,
-        // но этот код - для удобства разработки, так что не будем трогать стили
-        span.style.cssText = 'position:absolute;left:0;top:0';
-        span.innerHTML = i + 1;
-        lis[i].appendChild(span);
-    }
+    $(function () {
 
-    /* конфигурация */
-    var width = document.getElementById('slider_item').offsetWidth    ; // ширина изображения
-    var count = 1; // количество изображений
+        $('.btn_grey').on('click', function(event){
+            event.preventDefault();
+            $(event.target).toggleClass('btn_active');
+        });
 
+        window.footerView = function() {
+            var text = '<a href="portfolio.html" data-i18n="footer.portfolio"></a>';
+            if (window.location.hash == '#main' || window.location.hash == '') {
+                text = '<a class="our-works" data-i18n="footer.works" onclick="nextSlide()">НАШИ РАБОТЫ</a>';
+                $('.footer').removeClass('footer--showed').removeClass('footer--hidden');
+            }else if(window.location.hash == '#contacts') {
 
-    var carousel = document.getElementById('carousel');
-    var list = carousel.querySelector('ul');
-    var listElems = carousel.querySelectorAll('li');
+                $('.footer').addClass('footer--hidden').removeClass('footer--showed');
+            }else{
 
-    var position = 0; // текущий сдвиг влево
+                $('.footer').removeClass('footer--hidden').addClass('footer--showed');
+            }
 
-    var prev = document.getElementById('prev');
-    var next = document.getElementById('next');
+            $('.footer span').html(text);
+            $('body').i18n();
+        };
 
+        var swiper = new Swiper('.swiper-container', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true,
+            keyboardControl: true,
+            onSlideChangeEnd: function (swiperObj) {
+                footerView();
+            }
+        });
 
-    prev.onclick = function() {
-        // сдвиг влево
-        position = Math.min(position + width * count, 0);
-        list.style.marginLeft = position + 'px';
-    };
-    next.onclick = function() {
-        // сдвиг вправо
-        position = Math.max(position - width * count, -width * (listElems.length - count));
-        list.style.marginLeft = position + 'px';
-    };
+        footerView();
+
+        $(window).on('hashchange', function(e){
+            footerView();
+        });
+
+        $('#goto-contacts').on('click touchstart', function () {
+            swiper.slideTo(13, 100);
+            $('.sidemenu-switcher').trigger('click');
+        });
+
+        $('#goto-main').on('click touchstart', function () {
+            swiper.slideTo(0, 100);
+            $('.sidemenu-switcher').trigger('click');
+        });
+
+        window.nextSlide = function () {
+            swiper.slideTo(1,100);
+        };
+
+        $('.sidemenu__header').each(function () {
+            this.onclick = function () {
+                swiper.slideTo(0, 100);
+                $('.sidemenu-switcher').trigger('click');
+            };
+        });
+
+        $('.sidemenu__vertical-logo').each(function () {
+            this.onclick = function () {
+                swiper.slideTo(0, 100);
+            };
+        });
+
+    });
+
 </script>
-
 </body>
 </html>
