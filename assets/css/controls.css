@@ -154,7 +154,6 @@ a:-webkit-any-link:not(.btn):hover {
 }
 
 .btn_default:hover,
-.btn_default:active,
 .btn_default.btn_active {
     background-color: #fff;
     color:#000;
@@ -167,7 +166,6 @@ a:-webkit-any-link:not(.btn):hover {
 }
 
 .btn_red:hover,
-.btn_red:active,
 .btn_red.btn_active{
     background-color: #db232e;
 }
@@ -179,7 +177,6 @@ a:-webkit-any-link:not(.btn):hover {
 }
 
 .btn_grey:hover,
-.btn_grey:active,
 .btn_grey.btn_active{
     background-color: #f43d48;
 
@@ -254,6 +251,10 @@ a:-webkit-any-link:not(.btn):hover {
     padding:0;
 }
 
+.container__item_align-top {
+    align-self: flex-start;
+}
+
 .container__items_downed {
     margin-top: 62px;
 }
@@ -295,6 +296,10 @@ a:-webkit-any-link:not(.btn):hover {
     width:31%;
 }
 
+.container__elem_100 {
+    width:100%;
+}
+
 .container__elem_50:last-child {
     margin-right: 0;
 }
@@ -321,6 +326,10 @@ a:-webkit-any-link:not(.btn):hover {
     color: #fff;
     border-color:#f43d48;
 }
+
+.container_not-margin {
+    margin: 0;
+ }
 
 /* list */
 
