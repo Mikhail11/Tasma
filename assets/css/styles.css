@@ -848,6 +848,10 @@ footer {
         padding: 24px !important;
     }
 
+    .portfolio-header__items {
+        margin-left: 12px;
+    }
+
     .portfolio__item__menu-wrapper {
         padding: 24px;
         flex-direction: column;
@@ -1328,7 +1332,8 @@ footer {
 @media all and (min-width: 320px) {
 
     .slide-page__content__header {
-        font-size: 30px;
+        font-size: 32px !important;
+        line-height: 40px !important;
     }
 
     .slide-page__content__header--main {
@@ -1342,6 +1347,9 @@ footer {
         width: 220px;
 
         transform: none;
+    }
+    .slide-page__content {
+        width:80%;
     }
 }
 

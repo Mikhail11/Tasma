@@ -458,6 +458,15 @@ a:-webkit-any-link:not(.btn):hover {
         padding:0;
     }
 
+    .container__image {
+        width: 70px;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+    .clients_logos {
+        margin-top: 30px;
+    }
+
     .mbl_not_padded {
         padding:0;
     }
