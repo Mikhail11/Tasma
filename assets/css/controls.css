@@ -471,9 +471,21 @@ a:-webkit-any-link:not(.btn):hover {
         padding:0;
     }
 
+    .mbl_marged {
+        margin-top: 10px;
+    }
 
     .inpt_mbl {
         margin:0 0 42px 0;
+    }
+
+    .slide-page__content__header {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .slide-page__content {
+        width: 80%;
     }
 
 }
