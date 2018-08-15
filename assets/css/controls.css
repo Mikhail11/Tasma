@@ -426,6 +426,7 @@ a:-webkit-any-link:not(.btn):hover {
 @media (max-width:480px){
     .container {
         padding:24px;
+        width:90%;
     }
     .container__item-content,
     .container__item{

@@ -181,7 +181,8 @@ $(function () {
   });
 
   $('body').on('scroll', function() {
-    if ($('body').scrollTop() > 0) {
+    var scrolls = $('html').scrollTop() || $('body').scrollTop();
+    if (scrolls > 0) {
         $('.header__logo').addClass('header__logo_short');
     } else {
         $('.header__logo').removeClass('header__logo_short');
