@@ -368,7 +368,7 @@ footer {
 }
 
 .swiper-slide-active .animated {
-    transition-delay: .9s;
+    transition-delay: .3s;
 }
 
  .animated_active,
