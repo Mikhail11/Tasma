@@ -148,7 +148,7 @@
   <div class="portfolio-footer">
     <div class="portfolio-footer__call container">
       <span class="portfolio-footer__text header header_h3 header_white">Оставьте заявку</span>
-      <a href="breef.html" class="portfolio-footer__breef-btn btn btn_red">Заполните бриф</a>
+      <a href="breef.html" class="portfolio-footer__breef-btn btn btn_red animated">Заполните бриф</a>
     </div>
     <div class="portfolio-footer__contacts container__item container container_row container_mbl_col">
       <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
@@ -212,6 +212,13 @@
         this.onclick = toMain;
       });
 
+      $('.content').on('scroll', function(event) {
+          var scrollTop = $('.content').scrollTop();
+          if  (scrollTop > $('.portfolio').height())
+          {
+              $('.animated').addClass('animated_active');
+          }
+      });
 
     });
   </script>

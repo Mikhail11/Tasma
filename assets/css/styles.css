@@ -359,35 +359,22 @@ footer {
 }
 
 /**-------- contacts ----------------**/
-.presentation a,
-.contacts__header,
-.contacts__mail,
-.contacts__phone,
-.social {
+.animated {
     transform: translate3d(0, 100%, 0);;
-
+    opacity: 0;
     transition:  .7s ease all;
 
     transition-delay: 0s;
 }
 
-.contacts__header,
-.contacts__mail,
-.contacts__phone,
-.social {
-    opacity: 0;
+.swiper-slide-active .animated {
+    transition-delay: .9s;
 }
 
-.swiper-slide-active .contacts__header,
-.swiper-slide-active .contacts__mail,
-.swiper-slide-active .contacts__phone,
-.swiper-slide-active .social {
+ .animated_active,
+ .swiper-slide-active .animated {
     opacity: 1;
     transform: none;
-}
-
-.swiper-slide-active .contacts__header {
-    transition-delay: .3s;
 }
 
 .swiper-slide-active .contacts__mail,
