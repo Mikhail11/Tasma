@@ -282,7 +282,7 @@ footer {
 .overlay {
     display: block;
     position: fixed;
-    background: rgba(0,0,0,.9);
+    background: rgb(0,0,0);
     top: 0;
     left: 0;
     width: 100%;

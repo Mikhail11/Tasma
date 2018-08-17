@@ -196,4 +196,12 @@ $(function () {
           $('.header__logo').removeClass('header__logo_short');
       }
   });
+
+  $('.container').on('scroll', function() {
+      if ($('.content').scrollTop() > 0) {
+          $('.header__logo').addClass('header__logo_short');
+      } else {
+          $('.header__logo').removeClass('header__logo_short');
+      }
+  });
 });
