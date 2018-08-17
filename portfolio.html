@@ -214,7 +214,8 @@
 
       $('.content').on('scroll', function(event) {
           var scrollTop = $('.content').scrollTop();
-          if  (scrollTop > $('.portfolio').height())
+          var portfolio = $('.portfolio').height()*0.7;
+          if  (scrollTop > portfolio)
           {
               $('.animated').addClass('animated_active');
           }
