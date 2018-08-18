@@ -395,6 +395,10 @@ a:-webkit-any-link:not(.btn):hover {
     display: inline-block;
 }
 
+.video_block {
+    height: 600px;
+}
+
 
 .openwork__content__swipe {
     width: 100%;
@@ -579,6 +583,10 @@ a:-webkit-any-link:not(.btn):hover {
         height:300px;
     }
 
+    .video_block {
+        height: 300px;
+    }
+
 }
 
 @media (max-width:480px){
@@ -595,6 +603,9 @@ a:-webkit-any-link:not(.btn):hover {
         height: 20%;
     }
 
+    .video_block {
+        height: 200px;
+    }
     .openwork__content_slider_item{
         height:150px;
     }

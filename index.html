@@ -89,14 +89,10 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide-page" id="mainpage" data-hash="main">
-          <!--<div class="slide-page__bg" style="background-image: url('./assets/images/portfolio/swim.png');"></div>-->
           <div class="slide-page__grid-layer"></div>
           <div class="slide-page__content">
-            <div class="slide-page__content__type"  data-i18n="slides.swim.type">
-              Рекламный
-            </div>
-            <div class="slide-page__content__header header header_bold header_h1" data-i18n="[html]slides.swim.header">
-              Промо-ролик SIYUM Kazan 2018
+            <div class="slide-page__content__header header header_bold header_h1" data-i18n="[html]slides.mainpage.header">
+                Придумываем и воплощаем идеи в видео
             </div>
             <div class="btn btn_default btn_small video_btn" data-video="https://player.vimeo.com/video/177988917"  data-i18n="play-video" video-id="0">
               Посмотреть шоурил
@@ -114,7 +110,7 @@
             <div class="slide-page__content__header header header_bold header_h1" data-i18n="[html]slides.thrones.header">
               Казань в стиле сериала “Игра престолов”
             </div>
-            <div class="btn btn_default btn_small video_btn" data-video="" data-i18n="open-video" video-id="0">
+            <div class="btn btn_default btn_small video_href" data-video="" data-i18n="open-video" video-id="0">
               Подробнее
             </div>
           </div>
@@ -130,7 +126,7 @@
             <div class="slide-page__content__header header header_bold header_h1" data-i18n="[html]slides.sarmanovo.header">
               Сармановский район
             </div>
-            <div class="btn btn_default btn_small video_btn" data-video=""  data-i18n="open-video" video-id="0">
+            <div  class="btn btn_default btn_small video_href" data-video="openwork.html"  data-i18n="open-video" video-id="0">
               Подробнее
             </div>
           </div>
@@ -205,6 +201,15 @@
 <!-- Initialize Swiper -->
 <script>
   $(function () {
+
+    $('.video_href').on('click', function(event){
+        event.stopImmediatePropagation();
+        var video = $(event.target).data('video');
+        if(video){
+            window.location.href = video;
+        }
+    });
+
     $('#mainpage').vide('assets/video/tasma',{
       posterType: 'jpg',
       autoplay: true
