@@ -220,7 +220,8 @@
             swiper.slideTo(0, 100);
         }
 
-        if(window.location.hash === '#contacts') {
+
+        if($('.sidemenu--opened').length > 0) {
             $('.sidemenu-switcher').trigger('click');
         }
 
@@ -235,16 +236,19 @@
 
 
     $('.swiper-wrapper').on('mousemove', function(event) {
-        var width = document.documentElement.clientWidth/2;
+        var width = document.documentElement.clientWidth;
         var clientX = event.clientX;
 
         if(window.location.hash !== '#contacts') {
-            if (clientX < width) {
+            if (clientX < (width*0.2)) {
                 $('.swiper-button-next').removeClass('swiper-button_visible');
                 $('.swiper-button-prev').addClass('swiper-button_visible');
-            } else {
+            } else if(clientX > (width*0.8)) {
                 $('.swiper-button-prev').removeClass('swiper-button_visible');
                 $('.swiper-button-next').addClass('swiper-button_visible');
+            } else {
+                $('.swiper-button-prev').removeClass('swiper-button_visible');
+                $('.swiper-button-next').removeClass('swiper-button_visible');
             }
         }
 
@@ -279,12 +283,12 @@
 
     $('#goto-contacts').on('click touchstart', function () {
       swiper.slideTo(13, 100);
-      // $('.sidemenu-switcher').trigger('click');
+      $('.sidemenu-switcher').trigger('click');
     });
 
     $('#goto-main').on('click touchstart', function () {
       swiper.slideTo(0, 100);
-      // $('.sidemenu-switcher').trigger('click');
+      $('.sidemenu-switcher').trigger('click');
     });
 
     window.nextSlide = function () {
