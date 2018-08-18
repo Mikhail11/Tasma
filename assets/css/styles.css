@@ -666,7 +666,7 @@ footer {
     background-position: center center;
 
     background-size: 120%;
-    transition: background-size 1.5s ease-in-out;
+    transition: background-size 2.5s ease-in-out;
 }
 
 .portfolio__item:hover .portfolio__item__bg {

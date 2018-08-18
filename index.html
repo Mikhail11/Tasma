@@ -215,11 +215,24 @@
       autoplay: true
     });
 
+      $(window).bind( 'hashchange', function(e) {
+        if(window.location.hash === '#main') {
+            swiper.slideTo(0, 100);
+        }
+
+        if(window.location.hash === '#contacts') {
+            $('.sidemenu-switcher').trigger('click');
+        }
+
+    });
+
     $('.btn__breef').on('click', function(event){
         event.stopImmediatePropagation();
 
         window.location.href = 'breef.html';
     });
+
+
 
     $('.swiper-wrapper').on('mousemove', function(event) {
         var width = document.documentElement.clientWidth/2;
@@ -271,7 +284,7 @@
 
     $('#goto-main').on('click touchstart', function () {
       swiper.slideTo(0, 100);
-      $('.sidemenu-switcher').trigger('click');
+      // $('.sidemenu-switcher').trigger('click');
     });
 
     window.nextSlide = function () {
