@@ -656,21 +656,33 @@ footer {
 }
 
 .portfolio__item__bg {
-    -webkit-transform:translate3d(0px,0px,0px) scale(1.01);
-       -moz-transform:translate3d(0px,0px,0px) scale(1.01);
-         -o-transform:translate3d(0px,0px,0px) scale(1.01);
-            transform:translate3d(0px,0px,0px) scale(1.01);
+    position: relative;
+    top: 0;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    /*background-size: cover;*/
+    background-position: center center;
 
-    -webkit-transition: 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) all;
-       -moz-transition: 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) all;
-         -o-transition: 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) all;
-            transition: 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) all;
+    background-size: 120%;
+    transition: background-size 1.5s ease-in-out;
 }
 
 .portfolio__item:hover .portfolio__item__bg {
-
+    background-size: 150%;
 }
 
+@media (max-width: 767px) {
+    .portfolio__item__bg {
+
+        background-size: 190%;
+    }
+
+    .portfolio__item:hover .portfolio__item__bg {
+        background-size: 220%;
+    }
+}
 
 @media all and (min-width: 1200px ) {
     .portfolio__item {
@@ -726,16 +738,7 @@ footer {
     justify-content:flex-end;
 }
 
-.portfolio__item__bg {
-    position: relative;
-    top: 0;
-    min-width: 100%;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-}
+
 
 .portfolio__item__menu-wrapper {
 
@@ -939,6 +942,10 @@ footer {
     display: none;
 }
 
+.sidemenu--opened .sidemenu__content {
+    display:block;
+}
+
 .sidemenu__header,
 .sidemenu__footer {
     display: none;
@@ -953,6 +960,7 @@ footer {
 .sidemenu__content {
     list-style-image: none;
     margin-bottom: 30px;
+    display: none;
 }
 
 .sidemenu__content__item {
@@ -1093,23 +1101,6 @@ footer {
         left: 27px;
     }
 
-}
-
-@media all and (max-height: 540px) and (min-width: 320px) {
-    .sidemenu--opened {
-        overflow-y: scroll;
-    }
-
-    .sidemenu--opened .sidemenu__footer {
-        position: relative;
-        bottom: 0;
-        left: 0;
-    }
-
-    .sidemenu-switcher {
-        position: relative;
-        top: -45px;
-    }
 }
 
 @media all and  (max-height: 540px){

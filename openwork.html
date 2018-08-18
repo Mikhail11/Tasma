@@ -37,8 +37,9 @@
         </div>
     </div>
 </div>
+<div class="menu-overlay"></div>
 
-<div class="container">
+<div class="container container__openwork">
     <div class="container__item container__items_downed container">
         <h3 class="header header_h3 header_white header_bold">Жилой комплекс «Южный бульвар»</h3>
         <div class="container__item-content-half container__elem_s_100">
@@ -68,35 +69,77 @@
             </div>
         </div>
     </div>
-    <div class="container__item container">
-        <div class="container__item-content container_block">
-            <img class="container__elem_100" src="assets/images/portfolio/Engineering.jpg"/>
+
+    <div class="container__item container" >
+        <div id="carousel" class="openwork__content_carousel outer">
+            <div class="openwork__content_slider">
+                <div id="slider_main" class="slider_main">
+                        <div id="slider_item" class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/Collection.jpg')"></div>
+                        <div  class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/Collection.jpg')"></div>
+                        <div  class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/Nominees.jpg')"></div>
+                        <div  class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/Sarmanovo.jpg')"></div>
+                        <div  class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/sarman.png')"></div>
+                        <div  class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/Polis24.jpg')"></div>
+                        <div  class="openwork__content_slider_item" style="background-image: url('assets/images/portfolio/Tatenergosbyt.jpg')"></div>
+                </div>
+            </div>
+            <div class="openwork__content_carousel_area container__elem_100 inner">
+                <div class="swipe-left">
+                </div>
+                <div class="swipe-right">
+                </div>
+            </div>
         </div>
-        <div class="container__item container__items_downed container container_row container_mbl_col">
-            <span class="container__elem_50 container__elem_s_100 header header_h3 header_white container__item_align-top">
-                A respectful response to function and setting
-            </span>
-            <div class="container__elem_50 container__elem_s_100 container container__item-content container_not-margin">
+        <div id="progress-bar" class="progress-bar container_block "></div>
+        <div id="progress-bar-add" class="progress-bar-add"></div>
+    </div>
+    <div class="container__item-content container ">
+        <span id="imgNum" class="header header_p header_white-t">
+            1/4
+        </span>
+    </div>
+    <div class="container__item container__items_downed container container_row container_mbl_col">
+        <span class="container__elem_50 container__elem_s_100 header header_h3 header_white container__item_align-top">
+            A respectful response to function and setting
+        </span>
+        <div class="container__elem_50 container__elem_s_100 container container__item-content container_not-margin">
                 <span class="header header_p header_white mbl_marged">
                     A sincere interest in intelligent and sustainable design extends to every aspect of working.
                                         Just as meticulous research is integral to the formulation of each product, our utilitarian containers are created with utmost care to
                                         ensure they function with ease and are pleasing to our eyes.
                 </span>
-                <span class="header header_p header_white mbl_marged">
+            <span class="header header_p header_white mbl_marged">
                     In seeking new locations, our first considerations is to work with what already exists.
                                         It is our intention to weave ourselves into the fabric of place and add something of merit rather than impose a discordant presence,
                                         and our consistent to use a locally relevant design vocabulary.
                 </span>
 
-            </div>
         </div>
     </div>
-
-
-
-
 </div>
 
+<div class="container">
+    <div class="container_bordered-top"></div>
+    <div class="container__item-content container">
+        <a class="header header_h4 header_red-1-t">Следующий проект</a>
+    </div>
+    <div class="container__item container__items_downed container">
+        <h3 class="header header_h3 header_white header_bold">Сармановский район</h3>
+        <div class="container__item-content-half container__elem_s_100">
+            <p class="header header_h4 header_white-t">Имиджевый</p>
+        </div>
+    </div>
+</div>
+
+<div class="openwork__content__swipe">
+    <a id="prev" class="openwork__content__swipe_arrow-left header_white">
+        <img class="nav_arrow" src="assets/images/arrow-right.png"/>
+    </a>
+    <div class="openwork__content__swipe_text header_white header_h4"> Жилой комплекс «Южный бульвар»</div>
+    <a id="next" class="openwork__content__swipe_arrow-right header_white">
+        <img class="nav_arrow" src="assets/images/arrow-right.png"/>
+    </a>
+</div>
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper.min.js"></script>
@@ -112,72 +155,64 @@
 <script>
     $(function () {
 
-        $('.btn_grey').on('click', function(event){
-            event.preventDefault();
-            $(event.target).toggleClass('btn_active');
+        // carousel
+
+
+        /* конфигурация  карусели  */
+        var width = $('.openwork__content_slider').width(); // ширина изображения
+        var carouselList = $('.openwork__content_slider_item');
+        var stepWidth = 100/carouselList.length;
+        var step = 1;
+        var progress = document.getElementById('progress-bar-add');
+        var imgNum  = $('#imgNum');
+
+        imgNum.text(1 + '/' + carouselList.length);
+
+
+        progress.style.width = (step * stepWidth) +'%';
+
+        Array.prototype.forEach.call(carouselList, function(item, i){
+            $(item).width(width);
+            $(item).attr('data-num', i + 1);
+        });
+        var count = 1; // количество изображений
+        var count_all = 4;  // общее кол-во изображений  (задать вручную + смотри в css ) // хардкод
+
+
+        var carousel = document.getElementById('carousel');
+        var list = document.getElementById('slider_main');
+
+        list.style.width = (width*carouselList.length) + 'px';
+
+        var position = 0; // текущий сдвиг влево
+
+
+        var basic_width = window.innerWidth;
+
+        $('.swipe-left').on('click', function() {
+            if (step === 1) return;
+            step--;
+
+            imgNum.text(step + '/' + carouselList.length);
+            // сдвиг влево
+            position = Math.min(position + width * count, 0);
+            list.style.marginLeft = position + 'px';
+
+            // заполнение полоски
+            progress.style.width = (step * stepWidth) +'%';
+
         });
 
-        window.footerView = function() {
-            var text = '<a href="portfolio.html" data-i18n="footer.portfolio"></a>';
-            if (window.location.hash == '#main' || window.location.hash == '') {
-                text = '<a class="our-works" data-i18n="footer.works" onclick="nextSlide()">НАШИ РАБОТЫ</a>';
-                $('.footer').removeClass('footer--showed').removeClass('footer--hidden');
-            }else if(window.location.hash == '#contacts') {
+        $('.swipe-right').on('click',function() {
+            if (step === carouselList.length) return;
+            step++;
+            imgNum.text(step + '/' + carouselList.length);
+            // сдвиг вправо
+            position = Math.max(position - width * count, -width * (carouselList.length - count));
+            list.style.marginLeft = position + 'px';
 
-                $('.footer').addClass('footer--hidden').removeClass('footer--showed');
-            }else{
-
-                $('.footer').removeClass('footer--hidden').addClass('footer--showed');
-            }
-
-            $('.footer span').html(text);
-            $('body').i18n();
-        };
-
-        var swiper = new Swiper('.swiper-container', {
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 30,
-            hashnav: true,
-            keyboardControl: true,
-            onSlideChangeEnd: function (swiperObj) {
-                footerView();
-            }
+            progress.style.width = (step * stepWidth) +'%';
         });
-
-        footerView();
-
-        $(window).on('hashchange', function(e){
-            footerView();
-        });
-
-        $('#goto-contacts').on('click touchstart', function () {
-            swiper.slideTo(13, 100);
-            $('.sidemenu-switcher').trigger('click');
-        });
-
-        $('#goto-main').on('click touchstart', function () {
-            swiper.slideTo(0, 100);
-            $('.sidemenu-switcher').trigger('click');
-        });
-
-        window.nextSlide = function () {
-            swiper.slideTo(1,100);
-        };
-
-        $('.sidemenu__header').each(function () {
-            this.onclick = function () {
-                swiper.slideTo(0, 100);
-                $('.sidemenu-switcher').trigger('click');
-            };
-        });
-
-        $('.sidemenu__vertical-logo').each(function () {
-            this.onclick = function () {
-                swiper.slideTo(0, 100);
-            };
-        });
-
     });
 
 </script>
