@@ -220,6 +220,11 @@
             swiper.slideTo(0, 100);
         }
 
+        if(window.location.hash === '#contacts'){
+            $('.swiper-button-prev').removeClass('swiper-button_visible');
+            $('.swiper-button-next').removeClass('swiper-button_visible');
+        }
+
 
         if($('.sidemenu--opened').length > 0) {
             $('.sidemenu-switcher').trigger('click');
@@ -274,8 +279,6 @@
       hashnav: true,
       keyboardControl: true,
       onSlideChangeEnd: function () {
-          $('.swiper-button-prev').removeClass('swiper-button_visible');
-          $('.swiper-button-next').removeClass('swiper-button_visible');
 
       }
     });
