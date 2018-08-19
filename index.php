@@ -120,7 +120,7 @@
         }
     });
 
-    $('#mainpage').vide('<?= bloginfo("template_directory"); ?>/assets/video/tasma',{
+    $('#mainpage').vide('../assets/video/tasma',{
       posterType: 'jpg',
       autoplay: true
     });
