@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Медиа студия "Тасма"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/reset.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="assets/images/favicon-32.png" type="image/png">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/styles.css">
+    <link rel="shortcut icon" href="<?= bloginfo('template_directory'); ?>/assets/images/favicon-32.png" type="image/png">
     <!-- facebook open graph -->
     <meta property="og:site_name" content="Tasma Media"/>
     <meta property="og:url" content="http://tasma.pro/">
@@ -30,7 +30,7 @@
     <meta name="twitter:image:src" content="http://tasma.pro/assets/images/logo-social_2.jpg">
     <!-- end twitter card tags -->
 
-    <link rel="stylesheet" href="assets/css/controls.css">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/controls.css">
     <!-- Demo styles -->
     <style>
         html, body {
