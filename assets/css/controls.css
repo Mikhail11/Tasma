@@ -102,6 +102,7 @@ a:-webkit-any-link:not(.btn):hover {
    color:#fff;
    text-decoration: none;
    outline: none;
+   cursor:pointer;
 }
 
 .link_iconed:after {
