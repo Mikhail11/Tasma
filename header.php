@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Медиа студия "Тасма"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/reset.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="assets/images/favicon-32.png" type="image/png">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/styles.css">
+    <link rel="shortcut icon" href="<?= bloginfo('template_directory'); ?>/assets/images/favicon-32.png" type="image/png">
     <!-- facebook open graph -->
     <meta property="og:site_name" content="Tasma Media"/>
     <meta property="og:url" content="http://tasma.pro/">
@@ -30,7 +30,7 @@
     <meta name="twitter:image:src" content="http://tasma.pro/assets/images/logo-social_2.jpg">
     <!-- end twitter card tags -->
 
-    <link rel="stylesheet" href="assets/css/controls.css">
+    <link rel="stylesheet" href="<?= bloginfo('template_directory'); ?>/assets/css/controls.css">
     <!-- Demo styles -->
     <style>
         html, body {
@@ -55,7 +55,7 @@
 </head>
 <body>
 <!-- Swiper -->
-<a href="index.html#main" class="header__logo"></a>
+<a href="http://tasma.pro/#main" class="header__logo"></a>
 <div class="sidemenu-switcher" sm-state="1">
   <div class="con">
     <div class="bar top"></div>
@@ -65,10 +65,10 @@
 </div>
 <div class="sidemenu" style="-webkit-overflow-scrolling: touch;">
   <ul class="sidemenu__content">
-    <li class="sidemenu__content__item" id="mn"><a id="goto-main" href="index.html#main" data-i18n="sidemenu.links.main">Главная</a></li>
+    <li class="sidemenu__content__item" id="mn"><a id="goto-main" href="http://tasma.pro/#main" data-i18n="sidemenu.links.main">Главная</a></li>
       <li class="sidemenu__content__item"><a href="clients.html" data-i18n="sidemenu.links.about">О нас</a></li>
-    <li class="sidemenu__content__item"><a href="portfolio.html" data-i18n="sidemenu.links.portfolio">Портфолио</a></li>
-    <li class="sidemenu__content__item" id="cts"><a id="goto-contacts" href="index.html#contacts"  data-i18n="sidemenu.links.contacts">Контакты</a></li>
+    <li class="sidemenu__content__item"><a href=" http://tasma.pro/portfolio/" data-i18n="sidemenu.links.portfolio">Портфолио</a></li>
+    <li class="sidemenu__content__item" id="cts"><a id="goto-contacts" href="http://tasma.pro/#contacts"  data-i18n="sidemenu.links.contacts">Контакты</a></li>
   </ul>
 
   <div class="sidemenu__footer">

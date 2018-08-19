@@ -2,52 +2,47 @@
 <div class="content">
     <div class="swiper-container">
       <div class="swiper-wrapper">
+
+<?php query_posts('post_type=page&pagename=main');  while ( have_posts() ) : the_post(); ?>
+
         <div class="swiper-slide slide-page" id="mainpage" data-hash="main">
           <div class="slide-page__grid-layer"></div>
           <div class="slide-page__content">
-            <div class="slide-page__content__header header header_bold header_h1" data-i18new="[html]slides.mainpage.header">
-                Придумываем и воплощаем идеи в видео
+            <div class="slide-page__content__header header header_bold header_h1" data-i18new="<?php the_field('main_header_eng'); ?>">
+                <?php the_field('main_header'); ?>
             </div>
-            <div class="btn btn_default btn_small video_btn" data-video="https://player.vimeo.com/video/177988917"  data-i18n="play-video" video-id="0">
+            <div class="btn btn_default btn_small video_btn" data-video="<?php the_field('main_link'); ?>"  data-i18n="play-video" video-id="0">
               Посмотреть шоурил
             </div>
           </div>
         </div>
-
-        <div class="swiper-slide slide-page" data-hash="thrones">
-          <div class="slide-page__bg" style="background-image: url('<?= bloginfo("template_directory"); ?>/assets/images/portfolio/Thrones.png');"></div>
+        <?php
+            $slides = get_field('main_sliders');
+            foreach($slides as $value) {
+        ?>
+        <div class="swiper-slide slide-page">
+          <div class="slide-page__bg" style="background-image: url('<?= $value['project_slider']['url'] ?>')"></div>
           <div class="slide-page__grid-layer"></div>
           <div class="slide-page__content">
-            <div class="slide-page__content__type"  data-i18n="slides.thrones.type">
-              3D видео графика
+            <div class="slide-page__content__type"  data-i18new="<?= $value['project_category_eng'] ?>">
+              <?= $value['project_category'] ?>
             </div>
-            <div class="slide-page__content__header header header_bold header_h1" data-i18n="[html]slides.thrones.header">
-              Казань в стиле сериала “Игра престолов”
+            <div class="slide-page__content__header header header_bold header_h1" data-i18new="<?= $value['project_header_eng'] ?>">
+              <?= $value['project_header'] ?>
             </div>
-            <div class="btn btn_default btn_small video_href" data-video="" data-i18n="open-video" video-id="0">
+            <div class="btn btn_default btn_small video_href" data-video="<?= $value['project_link'] ?>" data-i18n="open-video" video-id="0">
               Подробнее
             </div>
           </div>
         </div>
+        <?php } ?>
+<?php endwhile; ?>
 
-        <div class="swiper-slide slide-page" data-hash="sarmanovo">
-          <div class="slide-page__bg" style="background-image: url('<?= bloginfo("template_directory"); ?>/assets/images/portfolio/sarman.png');"></div>
-          <div class="slide-page__grid-layer"></div>
-          <div class="slide-page__content">
-            <div class="slide-page__content__type"  data-i18n="slides.sarmanovo.type">
-              Имиджевый
-            </div>
-            <div class="slide-page__content__header header header_bold header_h1" data-i18n="[html]slides.sarmanovo.header">
-              Сармановский район
-            </div>
-            <div  class="btn btn_default btn_small video_href" data-video="openwork.html"  data-i18n="open-video" video-id="0">
-              Подробнее
-            </div>
-          </div>
-        </div>
 
 
         <div class="swiper-slide slide-page slide-page--contacts" data-hash="contacts" id="contacts">
+        <?php query_posts('post_type=page&pagename=contactspage');  while ( have_posts() ) : the_post(); ?>
+
           <div class="container">
             <div class="container__item container__items_downed container">
               <h3 class="header header_h3 header_white header_bold">Свяжитесь с нами</h3>
@@ -55,25 +50,25 @@
             <div class="container__item container container_row container_mbl_col container_clear">
               <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
                 <span class="header header_s header_red-3">Телефон</span>
-                <a href="tel:+7(843)226-55-57" class="header header_h4 header_white header_bold container__item-content">+7 (843) 226-55-57</a>
+                <a href="tel:<?php the_field('phone'); ?>" class="header header_h4 header_white header_bold container__item-content"><?php the_field('phone'); ?></a>
               </div>
               <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
                 <span class="header header_s header_red-3">Дополнительно</span>
-                <a href="" class="link_heiged link_iconed header header_bold header_h4 container__item-content">Скачать презентацию</a>
+                <a href="<?php the_field('presentation'); ?>" class="link_heiged link_iconed header header_bold header_h4 container__item-content">Скачать презентацию</a>
               </div>
             </div>
             <div class="container__item container container_row container_mbl_col container_clear">
               <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
                 <span class="header header_s header_red-3">Почта</span>
-                <a href="mailto:arttasms@gmail.com" class="header header_h4 header_white header_bold container__item-content">arttasms@gmail.com</a>
+                <a href="mailto:<?php the_field('email'); ?>" class="header header_h4 header_white header_bold container__item-content"><?php the_field('email'); ?></a>
               </div>
               <div class="container container__item-content container__elem_25 container__elem_s_50">
                 <span class="header header_s header_red-3">Социальные сети</span>
                 <div class="container container__item-content container_row container__elem_50 container__sb container__elem_s_100">
-                  <a href="" class="social__link"><span class="icons instagram"></span></a>
-                  <a href="" class="social__link"><span class="icons vk"></span></a>
-                  <a href="" class="social__link"><span class="icons vimeo"></span></a>
-                  <a href="" class="social__link"><span class="icons facebook"></span></a>
+                  <a href="<?php the_field('insta_link'); ?>" class="social__link"><span class="icons instagram"></span></a>
+                  <a href="<?php the_field('vk_link'); ?>" class="social__link"><span class="icons vk"></span></a>
+                  <a href="<?php the_field('vimeo_link'); ?>" class="social__link"><span class="icons vimeo"></span></a>
+                  <a href="<?php the_field('fb_link'); ?>" class="social__link"><span class="icons facebook"></span></a>
                 </div>
               </div>
             </div>
@@ -81,6 +76,7 @@
               <a class="btn btn_red btn__breef animated">Заполнить бриф</a>
             </div>
           </div>
+        <?php endwhile; ?>
         </div>
 
       </div>
@@ -102,12 +98,15 @@
   </div>
 </div>
 
-<!-- Swiper JS -->
-<script src="<?= bloginfo('template_directory'); ?>/assets/js/swiper.min.js"></script>
+
 
 <script src="<?= bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
 <script src="<?= bloginfo('template_directory'); ?>/assets/js/jquery.vide.js"></script>
 <script src="<?= bloginfo('template_directory'); ?>/assets/js/jquery.cookie.js"></script>
+
+<!-- Swiper JS -->
+<script src="<?= bloginfo('template_directory'); ?>/assets/js/swiper.min.js"></script>
+
 
 <!-- Initialize Swiper -->
 <script>
@@ -146,7 +145,7 @@
     $('.btn__breef').on('click', function(event){
         event.stopImmediatePropagation();
 
-        window.location.href = 'breef.html';
+        window.location.href = 'http://tasma.pro/breef/';
     });
 
 
@@ -192,6 +191,11 @@
       }
     });
 
+    $('.social__link').on('click', function(event){
+        event.stopImmediatePropagation();
+
+        window.location.href = event.target.href;
+    });
 
     $('#goto-contacts').on('click touchstart', function () {
       swiper.slideTo(13, 100);
