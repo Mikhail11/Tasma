@@ -10,12 +10,15 @@
   <div class="portfolio-header container">
       <div class=" portfolio-header__content container__item-content container_block">
         <span class="link portfolio-header__items">Все</span>
-        <span class="link portfolio-header__items">Презентационные</span>
-        <span class="link portfolio-header__items">Имиджевые</span>
-        <span class="link portfolio-header__items">Анимационные</span>
-        <span class="link portfolio-header__items">Рекламные</span>
-        <span class="link portfolio-header__items">3D видео ролики</span>
-        <span class="link portfolio-header__items">Видеоформление</span>
+        <?php $categories = get_categories();
+           if($categories) {
+           foreach($categories as $cat){
+                ?>
+         <span class="link portfolio-header__items"><?=$cat->name?></span>
+         <?php  }
+
+           }
+         ?>
         <a href="https://vimeo.com/tasmapro" target="_blank" class="link portfolio-header__items link_iconed">Больше работ на Vimeo</a>
       </div>
   </div>
@@ -30,8 +33,11 @@
       </div>
       <div class="portfolio__item__menu-wrapper">
         <div class="portfolio__item__menu">
-          <div class="portfolio__item__menu__type" data-category="" data-i18new="portfolio.engineering.type">
-            Ролик
+        <?php $category = get_the_category();
+              $category_name = $category[0]->cat_name;
+              ?>
+          <div class="portfolio__item__menu__type" data-category="<?=$category_name ?>" data-i18new="portfolio.engineering.type">
+            <?=$category_name ?>
           </div>
           <div class="portfolio__item__menu__header header header_h2" data-i18new="<?php the_field('preview_header_eng'); ?>">
             <?php the_field('preview_header'); ?>
@@ -97,6 +103,27 @@
   <script>
     $(function(){
 
+      $('span.portfolio-header__items').on('click', function(event){
+            event.stopImmediatePropagation();
+            var text = $(event.target).text().trim();
+            if(text === 'Все') {
+                Array.prototype.forEach.call($('.portfolio__item'), function(item){
+                    $(item).show();
+                });
+            } else {
+              Array.prototype.forEach.call($('.portfolio__item__menu__type'), function(item){
+                    var block = $(item).closest('.portfolio__item');
+                    var itemText = $(item).text().trim();
+
+                      if(itemText === text){
+                        $(block).show();
+                      } else {
+                        $(block).hide();
+                      }
+              });
+            }
+      });
+
       $('.portfolio__item').each(function (idx) {
         var mod = idx < 3 ? 1 : 2;
         $(this).delay(mod*500).animate({opacity: '1'}, 1200);
@@ -116,7 +143,7 @@
 
       $('.content').on('scroll', function(event) {
           var scrollTop = $('.content').scrollTop();
-          var portfolio = $('.portfolio').height()*0.7;
+          var portfolio = $('.portfolio').height()*0.5;
           if  (scrollTop > portfolio)
           {
               $('.animated').addClass('animated_active');
