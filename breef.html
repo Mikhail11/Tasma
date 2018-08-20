@@ -48,7 +48,7 @@
     </div>
     <div class="container__item container">
         <h4 class="header header_h4 header_white header_bold">Тип проекта</h4>
-        <div class="container__item-content container_block">
+        <div class="container__item-content container_block project_type">
             <span class="btn btn_grey btn_small">Корпаративный фильм</span>
             <span class="btn btn_grey btn_small">Рекламный</span>
             <span class="btn btn_grey btn_small">Анимационный</span>
@@ -61,7 +61,7 @@
     </div>
     <div class="container__item container">
         <h4 class="header header_h4 header_white header_bold">Хронометраж</h4>
-        <div class="container__item-content container_block">
+        <div class="container__item-content container_block project_time">
             <span class="btn btn_grey btn_small">15 сек</span>
             <span class="btn btn_grey btn_small">30 сек</span>
             <span class="btn btn_grey btn_small">до 1 мин</span>
@@ -73,21 +73,28 @@
     <div class="container__item container__items_downed container">
         <h4 class="header header_h4 header_white header_bold">Подробная информация</h4>
         <div class="container__item-content-half container__elem_s_100">
-            <input type="text" class="inpt" placeholder="Опишите задачу"/>
+            <input type="text" id="comment" class="inpt" placeholder="Опишите задачу"/>
         </div>
         <div class="container__item container container__elem container_row">
-            <span class="btn btn_default">Прикрепить файл</span>
+            <div class="btn btn_default">
+                <label>
+                    <input type="file" name="file" style="display: none">
+                    <span>Прикрепить файл</span>
+                </label>
+            </div>
+
+            <span class="header header_s header_white" id="fileText" hidden></span>
         </div>
     </div>
     <div class="container__item container__items_downed container">
         <h4 class="header header_h4 header_white header_bold">Контактная информация</h4>
         <div class="container__item-content-half container__elem_s_100 container container_row mbl_not_padded container_mbl_col container__items_semi-downed">
-            <input type="text" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Контактное лицо"/>
-            <input type="text" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Организация"/>
+            <input type="text" id="contactFace" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Контактное лицо"/>
+            <input type="text" id="organisation" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Организация"/>
         </div>
         <div class="container__item-content-half container__elem_s_100 container container_row container_mbl_col container_clear container__items_semi-downed">
-            <input type="text" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Электронная почта"/>
-            <input type="text" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Телефон"/>
+            <input type="text" id="email" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Электронная почта"/>
+            <input type="text" id="phone" class="inpt container__elem_50 container__elem_s_100 inpt_mbl" placeholder="Телефон"/>
         </div>
     </div>
     <div class="container__item container container_row container_mbl_col-rev">
@@ -108,6 +115,92 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.vide.js"></script>
 <script src="assets/js/jquery.cookie.js"></script>
+
+<script>
+    $(document).ready( function() {
+        $(".btn_default input[type=file]").change(function(){
+            var filename = $(this).val().replace(/.*\\/, "");
+            $("#fileText").text(filename);
+            $("#fileText").show();
+
+
+            var file_data = $("#breefFile").prop("files")[0];
+            var form_data = new FormData();
+            form_data.append("file", file_data);
+            $.ajax({
+                url: "<?= bloginfo('template_directory'); ?>/upload.php",
+                dataType: 'script',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,
+                type: 'post',
+                complete: function(response) {
+                    if(response.status === 200) {
+                        $('#fileBtn').attr('data-file', response.responseText);
+                    }
+                }
+            });
+        });
+
+
+        $('#sendBtn').on('click', function(event){
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            var project_type = getLabels('project_type');
+            var project_time = getLabels('project_time');
+            var comment = $('#comment').val();
+            var contactFace = $('#contactFace').val();
+            var organisation = $('#organisation').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var filename = $('#fileBtn').data('file');
+
+            if(project_type && project_time && comment && contactFace && organisation && email && phone && filename) {
+                send({
+                        name: contactFace,
+                        filename: filename,
+                        number: phone,
+                        organisation: organisation,
+                        comment: comment,
+                        project_type: project_type,
+                        project_time: project_time,
+                        email: email
+                    },
+                    function () {
+                    },
+                    function () {
+
+                    }
+                );
+            }
+
+        });
+
+        function getLabels(name) {
+            var arr = [];
+            var $elems = $('.' + name + ' .btn_active');
+
+            Array.prototype.forEach.call($elems, function(item){
+                arr.push($(item).text());
+            });
+
+            return arr.join(',');
+        }
+
+        function send(obj, callback, error) {
+            $.ajax({
+                url: "send.php",
+                method: 'POST',
+                data: obj,
+                success:callback,
+                error: error
+            });
+        }
+    });
+</script>
+
 <script src="assets/js/i18next.js"></script>
 <script src="assets/js/datastorage.js"></script>
 <script src="assets/js/bootstrap.js"></script>
