@@ -839,7 +839,7 @@ footer {
     }
 
     .portfolio-header__items {
-        margin-left: 12px;
+        margin-left: 0;
     }
 
     .portfolio__item__menu-wrapper {

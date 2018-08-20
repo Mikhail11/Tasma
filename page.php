@@ -36,7 +36,7 @@
         <?php $category = get_the_category();
               $category_name = $category[0]->cat_name;
               ?>
-          <div class="portfolio__item__menu__type" data-category="<?=$category_name ?>" data-i18new="portfolio.engineering.type">
+          <div class="portfolio__item__menu__type" data-category="<?=$category_name ?>">
             <?=$category_name ?>
           </div>
           <div class="portfolio__item__menu__header header header_h2" data-i18new="<?php the_field('preview_header_eng'); ?>">

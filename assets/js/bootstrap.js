@@ -36,11 +36,28 @@ $(function () {
     $('.presentation a').attr('href', fileUrl);
   };
 
+  function setNewLang(lang, start) {
+    if(start && lang === 'ru') return false;
+
+    var phrases = $('[data-i18new]');
+
+    Array.prototype.forEach.call(phrases, function(item){
+      var translate = item.dataset.i18new;
+      var original = $(item).text();
+
+      $(item).text(translate);
+      $(item).attr('data-i18new',original);
+
+    });
+  }
+
+
   $.i18n.init(i18nOptions, function() {
     var lang = $.cookie('lang') || 'ru';
     if(lang === null) {
       $.cookie('lang', 'ru');
     }
+    setNewLang(lang, true);
     $.i18n.setLng(lang);
     localizeTItle(lang);
     changePresentationFileUrl(lang);
@@ -51,6 +68,7 @@ $(function () {
 
   var switchLang = function (lang) {
     $.i18n.setLng(lang);
+    setNewLang(lang);
     $('body').i18n();
     $.cookie('lang', lang);
     localizeTItle(lang);
@@ -86,13 +104,7 @@ $(function () {
     switchLangAnimation(loadLang);
   });
 
-  // $('.lng-switch__item').each(function () {
-  //   this.onclick = function () {
-  //     var loadLang = $(this).attr('switchLang');
-  //     switchLang(loadLang);
-  //     switchLangAnimation(loadLang);
-  //   };
-  // });
+
 
   $('.menu-overlay').each(function () {
     this.onclick = function () {

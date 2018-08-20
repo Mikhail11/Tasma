@@ -28,7 +28,7 @@
                 <span class="header header_p header_white mbl_marged" data-i18new="<?php the_field('video_description_eng'); ?>">
                     <?php the_field('video_description_1'); ?>
                 </span>
-                <span class="header header_p header_white mbl_marged" data-i18new="<?php the_field('video_description_2'); ?>">
+                <span class="header header_p header_white mbl_marged" data-i18new="<?php the_field('video_description_eng_2'); ?>">
                     <?php the_field('video_description_eng_2'); ?>
                 </span>
 
