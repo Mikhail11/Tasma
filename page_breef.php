@@ -139,11 +139,15 @@
                         email: email
                     },
                     function () {
-                    },
-                    function () {
+                        $.message(response, 'success');
 
+                    },
+                    function (response) {
+                        $.message(response, 'error');
                     }
                 );
+            } else {
+                $.message('Не все поля заполнены!', 'error');
             }
 
         });

@@ -137,6 +137,18 @@ $(function () {
     }
   });
 
+  function message(text, type) {
+     var msgBlock =  $('<div/>').addClass('message').addClass(type)
+          .appendTo('body');
+     msgBlock.text(text);
+     msgBlock.addClass('message_opened');
+      setTimeout(function(){
+          msgBlock.remove();
+      }, 5000);
+  }
+
+  $.message = message;
+
   function makeModal(res) {
     var url = '';
     if(res.type == 'youtube') {
