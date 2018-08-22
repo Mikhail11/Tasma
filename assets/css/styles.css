@@ -129,6 +129,7 @@ body { overflow: -moz-scrollbars-none; }
     animation-duration: 3s;
 
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
     -webkit-transition: .3s linear all;
        -moz-transition: .3s linear all;
@@ -159,6 +160,15 @@ body { overflow: -moz-scrollbars-none; }
 
 .content--contacts {
     background: #eceae8;
+}
+
+
+.close_btn {
+    width: 10px;
+    height: 10px;
+    background: transparent url(../images/cross.svg) no-repeat;
+    background-size: contain;
+    margin-left: 10px;
 }
 
 

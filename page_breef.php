@@ -53,6 +53,7 @@
              </div>
 
              <span class="header header_s header_white" id="fileText" hidden></span>
+             <span class="close_btn" hidden></span>
         </div>
     </div>
     <div class="container__item container__items_downed container">
@@ -84,6 +85,13 @@
 
 <script>
     $(document).ready( function() {
+        $('.close_btn').on('click', function() {
+                $("#fileText").text('');
+                $("#fileText").hide();
+                $(".btn_default input[type=file]").val('');
+                $(this).hide();
+        });
+
         $('.btn_grey').on('click', function(event){
                 event.preventDefault();
                 $(event.target).toggleClass('btn_active');
@@ -92,7 +100,7 @@
             var filename = $(this).val().replace(/.*\\/, "");
             $("#fileText").text(filename);
             $("#fileText").show();
-
+            $(".close_btn").show();
 
             var file_data = $("#breefFile").prop("files")[0];
             var form_data = new FormData();

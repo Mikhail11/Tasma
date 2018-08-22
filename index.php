@@ -208,7 +208,7 @@
     $('.social__link').on('click', function(event){
         event.stopImmediatePropagation();
 
-        window.location.href = event.target.href;
+        window.location.href = event.currentTarget.href;
     });
 
     $('#goto-contacts').on('click touchstart', function () {
