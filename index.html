@@ -196,6 +196,22 @@
 <script>
   $(function () {
 
+    $('a').on('click', function(event) {
+        event.stopPropagation();
+    });
+
+    $('.video_btn').on('mousemove', function(){
+        event.stopImmediatePropagation();
+        $('.swiper-button-prev').removeClass('swiper-button_visible');
+        $('.swiper-button-next').removeClass('swiper-button_visible');
+    });
+
+    $('.video_href').on('mousemove', function(){
+        event.stopImmediatePropagation();
+        $('.swiper-button-prev').removeClass('swiper-button_visible');
+        $('.swiper-button-next').removeClass('swiper-button_visible');
+    });
+
     $('.video_href').on('click', function(event){
         event.stopImmediatePropagation();
         var video = $(event.target).data('video');

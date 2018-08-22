@@ -194,12 +194,14 @@ footer {
 }
 
 .swiper-button-next {
+    opacity: .3;
     background-image: none;
     visibility: hidden;
     right:15%;
 }
 
 .swiper-button-prev {
+    opacity: .3;
     background-image: none;
     visibility: hidden;
     left:15%;
