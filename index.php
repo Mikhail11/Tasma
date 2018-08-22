@@ -60,15 +60,15 @@
             <div class="container__item container container_row container_mbl_col container_clear">
               <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
                 <span class="header header_s header_red-3">Почта</span>
-                <a href="mailto:<?php the_field('email'); ?>" class="header header_h4 header_white header_bold container__item-content"><?php the_field('email'); ?></a>
+                <a target="_blank" href="mailto:<?php the_field('email'); ?>" class="header header_h4 header_white header_bold container__item-content"><?php the_field('email'); ?></a>
               </div>
               <div class="container container__item-content container__elem_25 container__elem_s_50">
                 <span class="header header_s header_red-3">Социальные сети</span>
                 <div class="container container__item-content container_row container__elem_50 container__sb container__elem_s_100">
-                  <a href="<?php the_field('insta_link'); ?>" class="social__link"><span class="icons instagram"></span></a>
-                  <a href="<?php the_field('vk_link'); ?>" class="social__link"><span class="icons vk"></span></a>
-                  <a href="<?php the_field('vimeo_link'); ?>" class="social__link"><span class="icons vimeo"></span></a>
-                  <a href="<?php the_field('fb_link'); ?>" class="social__link"><span class="icons facebook"></span></a>
+                  <a target="_blank" href="<?php the_field('insta_link'); ?>" class="social__link"><span class="icons instagram"></span></a>
+                  <a target="_blank" href="<?php the_field('vk_link'); ?>" class="social__link"><span class="icons vk"></span></a>
+                  <a target="_blank" href="<?php the_field('vimeo_link'); ?>" class="social__link"><span class="icons vimeo"></span></a>
+                  <a target="_blank" href="<?php the_field('fb_link'); ?>" class="social__link"><span class="icons facebook"></span></a>
                 </div>
               </div>
             </div>
@@ -111,7 +111,21 @@
 <!-- Initialize Swiper -->
 <script>
   $(function () {
+    $('a').on('click', function(event) {
+            event.stopPropagation();
+        });
 
+        $('.video_btn').on('mousemove', function(){
+            event.stopImmediatePropagation();
+            $('.swiper-button-prev').removeClass('swiper-button_visible');
+            $('.swiper-button-next').removeClass('swiper-button_visible');
+        });
+
+        $('.video_href').on('mousemove', function(){
+            event.stopImmediatePropagation();
+            $('.swiper-button-prev').removeClass('swiper-button_visible');
+            $('.swiper-button-next').removeClass('swiper-button_visible');
+        });
     $('.video_href').on('click', function(event){
         event.stopImmediatePropagation();
         var video = $(event.target).data('video');

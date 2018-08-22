@@ -127,7 +127,7 @@
             var phone = $('#phone').val();
             var filename = $('#fileBtn').data('file');
 
-            if(project_type && project_time && comment && contactFace && organisation && email && phone && filename) {
+            if(comment && contactFace && email && phone ) {
                 send({
                         name: contactFace,
                         filename: filename,
@@ -138,7 +138,7 @@
                         project_time: project_time,
                         email: email
                     },
-                    function () {
+                    function (response) {
                         $.message(response, 'success');
 
                     },
@@ -147,7 +147,7 @@
                     }
                 );
             } else {
-                $.message('Не все поля заполнены!', 'error');
+                $.message('Заполните все обязательные поля: Контактное лицо, Опишите задачу, Почта, Телефон', 'error');
             }
 
         });

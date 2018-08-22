@@ -72,7 +72,7 @@ body { overflow: -moz-scrollbars-none; }
     height:32px;
     position:absolute;
     top: 30px;
-    left: 32px;
+    left: 15px;
     z-index: 50;
     background-image: url(../images/long.png);
     background-size: contain;

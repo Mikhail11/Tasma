@@ -5,6 +5,7 @@
 ?>
 
 <?php get_header(); ?>
+<div class="content">
 <?php query_posts('post_type=page&pagename=about');  while ( have_posts() ) : the_post(); ?>
 <div class="container container_row container_mbl_col">
     <div class="container container__item container__elem_40 container_not-margin container__elem_s_100 clients_content container_clear">
@@ -55,6 +56,7 @@
     </div>
 </div>
 <?php endwhile; ?>
+</div>
 <script src="<?= bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
 <script src="<?= bloginfo('template_directory'); ?>/assets/js/jquery.cookie.js"></script>
 
