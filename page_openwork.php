@@ -79,6 +79,18 @@
 
 <?php
 $next_post = get_next_post();
+
+if(empty($next_post)) {
+    $args = array(
+    	'post_type' => 'page',
+    	'pagename' => 'openwork',
+    	'orderby' => array( 'date' => 'ASC')
+
+    );
+
+    $posts = get_posts('post_type=page&pagename=openwork');
+    var_dump($posts);
+}
 if( ! empty($next_post) ){
 	?>
 	<div class="container">

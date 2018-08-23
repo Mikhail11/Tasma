@@ -361,14 +361,15 @@ footer {
     .video-container {
         top: 20%;
         left: 5%;
-        width: 60%;
+        width: 90%;
         height: 30%;
     }
 
     .overlay__close {
-        top: 5%;
+        top: -30%;
     }
 }
+
 
 /**-------- contacts ----------------**/
 .animated {
@@ -676,6 +677,7 @@ footer {
     height: 100%;
     /*background-size: cover;*/
     background-position: center center;
+    background-repeat: no-repeat;
 
     background-size: 120%;
     transition: background-size 2.5s ease-in-out;

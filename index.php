@@ -41,8 +41,8 @@
 
 
         <div class="swiper-slide slide-page slide-page--contacts" data-hash="contacts" id="contacts">
+        <div class="content">
         <?php query_posts('post_type=page&pagename=contactspage');  while ( have_posts() ) : the_post(); ?>
-
           <div class="container">
             <div class="container__item container__items_downed container">
               <h3 class="header header_h3 header_white header_bold">Свяжитесь с нами</h3>
@@ -77,6 +77,7 @@
             </div>
           </div>
         <?php endwhile; ?>
+        </div>
         </div>
 
       </div>

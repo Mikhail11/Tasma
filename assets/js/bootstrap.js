@@ -213,8 +213,8 @@ $(function () {
     }
   });
 
-  $('.content').on('scroll', function() {
-      if ($('.content').scrollTop() > 0) {
+  $('.content').on('scroll', function(event) {
+      if (event.target.scrollTop > 0) {
           $('.header__logo').addClass('header__logo_short');
       } else {
           $('.header__logo').removeClass('header__logo_short');

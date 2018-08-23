@@ -14,7 +14,7 @@
         </div>
         <div class="container__item-content container container__elem_s_100">
             <span class="container__quots container__quots_red">
-                Компания, которая выполняет полный объем работ по создания медиапродукта высого качества
+                Компания, которая выполняет полный объем работ по созданию медиапродукта высого качества
             </span>
         </div>
         <div class="container__item-content container container__elem_s_100 container__elem_s_100">
