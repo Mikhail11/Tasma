@@ -593,7 +593,7 @@ a:-webkit-any-link:not(.btn):hover {
 
 .message_opened {
     top:10px;
-    height:40px;
+    height:auto;
     opacity:1;
 }
 
@@ -628,6 +628,7 @@ a:-webkit-any-link:not(.btn):hover {
 @media (max-width:480px){
     .openwork__content__swipe {
         padding: 0 24px;
+        background-color: rgba(0,0,0, .9);
     }
 
     #carousel:hover .swipe-left,
@@ -647,7 +648,7 @@ a:-webkit-any-link:not(.btn):hover {
     }
 
     .container {
-        padding:24px;
+        padding: 24px 12px 24px 36px;
         width:90%;
     }
 

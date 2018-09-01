@@ -9,17 +9,18 @@
 <div class="content">
   <div class="portfolio-header container">
       <div class=" portfolio-header__content container__item-content container_block">
-        <span class="link portfolio-header__items">Все</span>
+        <span class="link portfolio-header__items" data-i18new="All">Все</span>
         <?php $categories = get_categories();
            if($categories) {
+
            foreach($categories as $cat){
                 ?>
-         <span class="link portfolio-header__items"><?=$cat->name?></span>
+         <span class="link portfolio-header__items"  data-i18new="<?=$cat->description?>"><?=$cat->name?></span>
          <?php  }
 
            }
          ?>
-        <a href="https://vimeo.com/tasmapro" target="_blank" class="link portfolio-header__items link_iconed">Больше работ на Vimeo</a>
+        <a href="https://vimeo.com/tasmapro" target="_blank" class="link portfolio-header__items link_iconed" data-i18new="More works on Vimeo">Больше работ на Vimeo</a>
       </div>
   </div>
   <div class="portfolio">
@@ -28,22 +29,23 @@
         $post_info = get_post();
         $image = get_field('preview_image');
   ?>
-    <div class="portfolio__item">
+    <div class="portfolio__item" data-link="<?php the_field('preview_link'); ?>">
       <div class="portfolio__item__bg"  style="background-image: url('<?= $image['url'] ?>');">
       </div>
       <div class="portfolio__item__menu-wrapper">
         <div class="portfolio__item__menu">
         <?php $category = get_the_category();
               $category_name = $category[0]->cat_name;
+              $category_description = $category[0]->description;
               ?>
-          <div class="portfolio__item__menu__type" data-category="<?=$category_name ?>">
+          <div class="portfolio__item__menu__type" data-category="<?=$category_name ?>" data-i18new="<?=$category_description ?>">
             <?=$category_name ?>
           </div>
           <div class="portfolio__item__menu__header header header_h2" data-i18new="<?php the_field('preview_header_eng'); ?>">
             <?php the_field('preview_header'); ?>
           </div>
         </div>
-        <a href="<?php the_field('preview_link'); ?>" class="button-show-video" data-i18n="open-video">
+        <a class="button-show-video" data-i18n="open-video">
           Подробнее
         </a>
       </div>
@@ -55,25 +57,26 @@
 <?php query_posts('post_type=page&pagename=contactspage');  while ( have_posts() ) : the_post(); ?>
   <div class="portfolio-footer">
     <div class="portfolio-footer__call container">
-      <span class="portfolio-footer__text header header_h3 header_white">Оставьте заявку</span>
-      <a href="http://tasma.pro/breef/" class="portfolio-footer__breef-btn btn btn_red animated">Заполните бриф</a>
+      <span class="portfolio-footer__text header header_h3 header_white" data-i18new="
+Leave a request">Оставьте заявку</span>
+      <a href="http://tasma.pro/breef/" class="portfolio-footer__breef-btn btn btn_red animated" data-i18new="Fill in the brief">Заполните бриф</a>
     </div>
     <div class="portfolio-footer__contacts container__item container container_row container_mbl_col">
       <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
-        <span class="header header_s header_red-3">Телефон</span>
+        <span class="header header_s header_red-3" data-i18new="Phone">Телефон</span>
         <a href="tel:<?php the_field('phone'); ?>" class="header header_h4 header_white header_bold container__item-content"><?php the_field('phone'); ?></a>
       </div>
       <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
-        <span class="header header_s header_red-3">Почта</span>
+        <span class="header header_s header_red-3" data-i18new="E-mail">Почта</span>
         <a href="mailto:<?php the_field('email'); ?>" class="header header_h4 header_white header_bold container__item-content"><?php the_field('email'); ?></a>
       </div>
       <div class="container container__item-content container__elem_25 container__elem_s_50 container__elem_s_100">
-        <span class="header header_s header_red-3">Дополнительно</span>
-        <a href="<?php the_field('presentation'); ?>" class="link_heiged link_iconed header header_bold container__item-content">Скачать презентацию</a>
+        <span class="header header_s header_red-3" data-i18new="More info">Дополнительно</span>
+        <a href="<?php the_field('presentation'); ?>" class="link_heiged link_iconed header header_bold container__item-content" data-i18new="Download presentation">Скачать презентацию</a>
       </div>
     </div>
     <div class="portfolio-footer__background">
-      <span class="portfolio-footer__label   header header_h4 header_white-t">
+      <span class="portfolio-footer__label   header header_h4 header_white-t" data-i18new="© Media Studio «Tasma»">
         © Медиа Студия «Тасма»
       </span>
       <div class="container container__item-content container_row container__elem_10 container__sb container__elem_s_100">
@@ -106,7 +109,7 @@
       $('span.portfolio-header__items').on('click', function(event){
             event.stopImmediatePropagation();
             var text = $(event.target).text().trim();
-            if(text === 'Все') {
+            if(text === 'Все' || text === 'All') {
                 Array.prototype.forEach.call($('.portfolio__item'), function(item){
                     $(item).show();
                 });
@@ -122,6 +125,14 @@
                       }
               });
             }
+      });
+
+      $('.portfolio__item__menu-wrapper').on('click', function(event){
+            event.stopImmediatePropagation();
+            var parent = $(event.target).closest('.portfolio__item');
+            var link = $(parent).data('link');
+
+            window.location.href = link;
       });
 
       $('.portfolio__item').each(function (idx) {
