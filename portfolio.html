@@ -200,6 +200,11 @@
         $(this).delay(mod*500).animate({opacity: '1'}, 1200);
       });
 
+      $('.portfolio__item').on('touchstart', function(event){
+          event.stopPropagation();
+          $(event.currentTarget).addClass('portfolio__item_hover');
+      });
+
       var toMain = function () {
         location.href = "index.html#main";
       };

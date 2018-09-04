@@ -14,7 +14,7 @@ $(function () {
   });
 
   // switch lang  -
-  var lng = $.cookie('lang');
+  var lng = localStorage.getItem('lang');
   if(lng === null)
     lng = 'ru';
   var i18nOptions = {
@@ -53,9 +53,10 @@ $(function () {
 
 
   $.i18n.init(i18nOptions, function() {
-    var lang = $.cookie('lang') || 'ru';
+    var lang = localStorage.getItem('lang') || 'ru';
     if(lang === null) {
-      $.cookie('lang', 'ru');
+      // $.cookie('lang', 'ru');
+        localStorage.setItem('lang', 'ru');
     }
     setNewLang(lang, true);
     $.i18n.setLng(lang);
@@ -70,10 +71,11 @@ $(function () {
     $.i18n.setLng(lang);
     setNewLang(lang);
     $('body').i18n();
-    $.cookie('lang', lang);
+    // $.cookie('lang', lang);
+      localStorage.setItem('lang', lang);
     localizeTItle(lang);
     changePresentationFileUrl(lang);
-  }
+  };
 
   var switchLangAnimation = function (lang) {
     var lastLang = (lang == 'ru' ? 'en' : 'ru');

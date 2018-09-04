@@ -720,6 +720,13 @@ footer {
     animation: pzoom 4s;
 }
 
+.portfolio__item_hover .portfolio__item__bg {
+    /*background-size: 150%;*/
+    -webkit-animation: pzoom 4s;
+    -o-animation: pzoom 4s;
+    animation: pzoom 4s;
+}
+
 @media (max-width: 767px) {
     .portfolio__item__bg {
 
@@ -1308,6 +1315,7 @@ footer {
     -webkit-animation: zoom 40s;
     -o-animation: zoom 40s;
     animation: zoom 40s;
+    z-index: -1;
 }
 
 .slide-page__grid-layer {

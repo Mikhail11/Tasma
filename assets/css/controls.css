@@ -184,7 +184,7 @@ a:-webkit-any-link:not(.btn):hover {
     color:#fff;
 }
 
-.btn_grey:hover,
+/*.btn_grey:hover,*/
 .btn_grey.btn_active{
     background-color: #f43d48;
 
